@@ -1,0 +1,247 @@
+@media screen and (max-width: 768px) {
+  .topbg {
+    height: 360px !important;
+    margin-top: 88px;
+  }
+  .topText {
+    justify-content: center !important;
+  }
+  .area {
+    justify-content: center !important;
+  }
+  .joinCard {
+    margin-inline: auto !important;
+  }
+  .modalContent {
+    padding-inline: 16px !important;
+  }
+  .bodyMT {
+    margin-top: 30px !important;
+  }
+  .navItem {
+    padding-inline: 12px !important;
+  }
+}
+
+/* .modalUp {
+  z-index: 1050 !important;
+} */
+
+.noBorderTop {
+  padding-inline: 21px;
+  border-top: none;
+}
+
+& .circle {
+  border-radius: 50%;
+  overflow: hidden;
+
+  & img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+.lineHeight {
+  line-height: 1.4rem;
+  letter-spacing: 0.8px;
+}
+
+.bold-text {
+  font-weight: bold;
+}
+
+.aText {
+  color: var(--text);
+}
+
+.objectFitCover {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.topbg {
+  color: var(--black);
+  height: calc(100vh - 88px);
+  background: url(/images/join/top-background.png) no-repeat center center;
+  background-size: cover;
+}
+
+.topText {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.text-btn {
+  text-align: center;
+}
+
+.btn-mydark {
+  padding-inline: 15px;
+  padding-block: 10px;
+  color: #fff;
+  background-color: var(--black);
+  border: none;
+
+  &:hover {
+    background-color: var(--main);
+  }
+}
+
+.teamtotal {
+  background-color: #fff;
+  padding-block: 25px;
+  text-align: center;
+  display: flex;
+  width: auto;
+  border: rgb(160, 155, 153) 1px solid;
+  position: absolute;
+  bottom: -50px;
+  z-index: 5;
+
+  & .ing {
+    padding-inline: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border-right: #00000020 1px solid;
+  }
+
+  & .end {
+    display: flex;
+    flex-direction: column;
+    padding-inline: 50.5px;
+  }
+}
+
+.s1-title {
+  margin-top: 110px;
+  margin-bottom: 35px;
+}
+
+.noInfo {
+  width: 100%;
+  height: 497.97px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.navItem {
+  padding-inline: 24px;
+}
+
+/* card */
+.joinCard {
+  max-width: 320px;
+  position: relative;
+  margin-bottom: 20px;
+  margin-inline: 8px;
+
+  & .joinCardImgTop {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    vertical-align: middle;
+  }
+
+  & .avatar {
+    background-color: #eeeeee;
+    width: 100px;
+    height: 100px;
+    z-index: 5;
+  }
+
+  & .cardPosition {
+    position: absolute;
+    left: calc(50% - 50px);
+    top: calc(220px - 95px);
+    z-index: 5;
+  }
+
+  & .joinCardBody {
+    padding-top: 38px;
+
+    & .lineClampBox {
+      white-space: nowrap; /* 不換行 */
+      -webkit-line-clamp: 1; /* 指定顯示的行數 */
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+      text-overflow: ellipsis; /* 顯示省略號 */
+    }
+
+    & h5 {
+      margin-bottom: 10px;
+    }
+    & h6 {
+      margin-bottom: 8px;
+      -webkit-line-clamp: 1; /* 指定顯示的行數 */
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+      text-overflow: ellipsis; /* 顯示省略號 */
+    }
+    & p {
+      margin-bottom: 0;
+      letter-spacing: 0.4px;
+    }
+
+    & span {
+      color: var(--main);
+    }
+
+    & .avatar {
+      max-width: 48px;
+      max-height: 48px;
+    }
+  }
+}
+
+/* modal-揪團資訊 */
+.teamImg {
+  width: 100%;
+  height: 360px;
+}
+
+.teamInfo {
+  /* padding-right: 35px; */
+
+  & .avatar {
+    background-color: #eeeeee;
+    width: 100px;
+    height: 100px;
+    z-index: 5;
+  }
+
+  & h4 {
+    margin-bottom: 18px;
+  }
+  & h5 {
+    margin-bottom: 14px;
+    font-weight: bold;
+  }
+  & h6 {
+    white-space: nowrap;
+    margin-bottom: 16px;
+  }
+
+  & span {
+    color: var(--main);
+  }
+
+  & .avatar {
+    width: 60px;
+    height: 60px;
+  }
+}
+
+/* 我要開團 */
+.join-Text {
+  resize: none !important;
+}
+.miniText {
+  font-size: 14px;
+  letter-spacing: 0.25px;
+}

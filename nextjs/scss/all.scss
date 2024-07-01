@@ -1,0 +1,19 @@
+$primary: #ee3e27;
+$secondary: #625852;
+$info: #4e5052;
+$light: #f6f6f6;
+$dark: #000;
+$container-max-widths: (
+  sm: 540px,
+  md: 720px,
+  lg: 960px,
+  xl: 1440px,
+  xxl: 1440px,
+) !default;
+$form-select-border-radius: 0px;
+$input-border-radius: 0px;
+$pagination-border-radius: 0px;
+
+@import '../node_modules/bootstrap/scss/bootstrap';
+// @import '../node_modules/bootstrap/scss/variables';
+// @import '../node_modules/bootstrap/scss/mixins';

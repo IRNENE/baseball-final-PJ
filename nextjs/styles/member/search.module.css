@@ -1,0 +1,41 @@
+.searchContent {
+  & img {
+    object-fit: contain;
+    max-width: 100%;
+    max-height: 100%;
+  }
+}
+
+.resultSelectBox {
+  & button {
+    border: none;
+    background: none;
+    margin-inline: 15px;
+    padding: 8px 20px;
+    border-bottom: 2px solid transparent;
+    transition: 0.2s;
+
+    &:hover {
+      border-bottom: 2px solid #000;
+    }
+  }
+}
+.active {
+  border-bottom: 2px solid #000 !important;
+}
+
+.result {
+  max-width: 1200px;
+}
+
+@media screen and (max-width: 576px) {
+  .resultSelectBox {
+    & button {
+      margin-inline: 5px;
+    }
+  }
+
+  .top {
+    margin-top: 105px;
+  }
+}

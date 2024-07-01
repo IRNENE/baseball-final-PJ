@@ -1,0 +1,212 @@
+/* 文字省略 */
+@media (max-width: 576px) {
+  .cart-l-item li {
+    font-size: 12px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    width: 6em; /* 控制文本长度，可以根据需要调整 */
+  }
+}
+
+.cart-l-select {
+  margin: 0;
+  padding: 0;
+
+  border-bottom: var(--main) 1px solid;
+  & h6 {
+    margin-left: 10px;
+  }
+}
+
+.cart-l-title {
+  height: 44px;
+  align-items: center;
+  font-size: var(--p);
+  margin: 0;
+  padding: 0;
+  text-align: center;
+
+  border-bottom: var(--main) 1px solid;
+}
+
+@media (max-width: 576px) {
+  .cart-l-title {
+    display: none;
+  }
+}
+
+.cart-l-item {
+  margin: 0;
+  padding: 0;
+  height: 250px;
+  display: flex;
+  align-items: center;
+  font-size: var(--p);
+  border-bottom: var(--main) 1px solid;
+}
+.l-select {
+  width: 45px;
+  height: 38px;
+}
+@media (max-width: 576px) {
+  .l-select {
+    width: 100%;
+    height: 38px;
+  }
+}
+
+@media (max-width: 576px) {
+  .cart-l-item {
+    height: auto;
+    border-bottom: var(--main) 1px solid;
+  }
+}
+
+.l-info-content {
+  align-items: center;
+  padding-left: 20px;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr); /* 创建4个等宽的列 */
+  gap: 80px; /* 可选：设置列之间的间隔 */
+}
+
+@media (max-width: 576px) {
+  .l-info-content {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr); /* 创建1个等宽的列 */
+    gap: 5px; /* 可选：设置列之间的间隔 */
+  }
+
+  .l-select {
+    padding-top: 20px;
+  }
+  /* .li-info {
+    display: flex;
+    font-display: row;
+    justify-content: space-between;
+    font-size: 12px;
+  } */
+
+  .l-btn-group {
+    padding: 10px 0;
+  }
+}
+
+.l-select {
+  padding-top: 10px;
+}
+/*  */
+@media (min-width: 577px) {
+  .l-info {
+    width: 400px;
+    padding-left: 50px;
+  }
+  .l-btn-group {
+    width: 470px;
+  }
+  .l-info-img {
+    width: 200px;
+  }
+
+  /* .li-info {
+    display: flex;
+    font-display: row;
+    font-size: 15px;
+  } */
+}
+
+/* 商品照片 */
+.l-info-img {
+  justify-content: center;
+  align-items: center;
+}
+.l-img {
+  width: 150px;
+  height: 150px;
+  background: #000;
+  overflow: hidden;
+  line-height: 0;
+  margin: 0 auto;
+}
+.l-img img {
+  display: block;
+  width: 100%;
+  object-fit: cover;
+}
+/* 商品照片變更 */
+@media (max-width: 577px) {
+  .l-info-img {
+    align-self: start;
+    margin: 0;
+    width: 120px;
+    margin-top: 40px;
+  }
+
+  .l-img {
+    width: 110px;
+    height: 110px;
+    background: #000;
+    overflow: hidden;
+    line-height: 0;
+    margin: 0 auto;
+  }
+  .l-img img {
+    display: block;
+    width: 100%;
+    object-fit: cover;
+  }
+}
+
+/* 商品內容 */
+.l-info p {
+  margin: 0;
+}
+.l-sum p {
+  margin: 0;
+}
+.l-price p {
+  margin: 0;
+}
+.l-btn-group {
+  margin: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.l-del-btn button {
+  background: none; /* 移除背景色 */
+  border: none; /* 移除邊框 */
+  padding: 0; /* 可选：移除内边距 */
+  color: inherit; /* 可选：继承文字颜色 */
+}
+
+/* 鼠标悬停时的样式 */
+.l-del-btn button:hover {
+  background-color: transparent; /* 鼠标悬停时背景保持透明 */
+  cursor: pointer; /* 鼠标悬停时显示手形图标 */
+}
+
+@media (min-width: 577px) {
+  .l-del-btn {
+    margin-left: 35px;
+  }
+}
+
+.l-amount {
+  width: 60px;
+  text-align: center;
+}
+.l-amount::-webkit-inner-spin-button,
+.l-amount::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.quantity-input {
+  display: flex;
+  align-items: center;
+}
+.l-sum p {
+  margin: 0;
+}

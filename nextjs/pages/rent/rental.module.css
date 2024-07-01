@@ -1,0 +1,232 @@
+.product-image {
+  width: 100%;
+  height: auto;
+}
+
+.product-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.color-options {
+  margin-top: 10px;
+  width: 88px;
+  height: 80px;
+  display: flex; /* 使用彈性容器排列子元素 */
+}
+
+.color-options img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.similar-products {
+  height: 66px;
+  border-bottom: 1px solid black;
+  padding: 20px 0 20px 10px;
+}
+
+.peo {
+  background-color: #4e5052;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  margin-right: 10px;
+}
+.peo {
+  & img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 50%;
+  }
+}
+
+.nam {
+  display: inline-block;
+}
+
+.colsize-chart-table {
+  width: 100%;
+  margin-bottom: 25px;
+}
+.colsize-chart-table table {
+  width: 100%;
+  border-collapse: collapse;
+}
+.colsize-chart-table th {
+  padding: 10px;
+  text-align: center;
+  border-bottom: 3px solid #000;
+}
+
+.colsize-chart-table td {
+  padding: 10px;
+  text-align: center;
+  border-bottom: 1px solid #000;
+}
+
+.all-card {
+  border-radius: 0;
+  margin: 25px 0 25px;
+  box-shadow: 1px 1px 0px 0px;
+  background-color: #fdfbfb;
+}
+
+.all-card1 {
+  margin: 25px 0 25px;
+}
+
+.product-description {
+  height: 66px;
+  padding: 20px 0 20px 0;
+  border-bottom: 1px solid black;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.product-details {
+  margin: 30px 0 30px;
+}
+
+.comment {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.all-commen {
+  margin-bottom: 20px;
+}
+
+.nav-h {
+  height: 70px;
+  display: flex;
+  align-items: flex-end;
+}
+
+.free {
+  margin-top: 25px;
+  display: flex;
+  align-items: center;
+}
+
+.box {
+  background-color: #91857f;
+  color: var(--gray-light);
+  width: fit-content; /* 自适应内容的宽度 */
+  height: fit-content; /* 自适应内容的高度 */
+  margin-right: 20px;
+  flex-direction: row; /* 横向排列 */
+  white-space: nowrap;
+  padding: 5px;
+}
+
+/*特價*/
+.save {
+  color: var(--main);
+  align-items: flex-end;
+}
+/*原價*/
+.op {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-end;
+}
+
+/*選擇數量長度*/
+.ig {
+  width: 200px;
+}
+
+/*選擇數量文字樣式*/
+.digit {
+  border: 1px solid black;
+  text-align: center;
+  color: var(--main);
+}
+
+/*更多相似商品名字*/
+.cpm {
+  white-space: nowrap; /* 防止换行 */
+  overflow: hidden; /* 隐藏溢出的部分 */
+  text-overflow: ellipsis; /* 使用省略号表示溢出的部分 */
+}
+
+/*更多相似商品價格樣式*/
+.cb {
+  display: flex;
+  align-items: center;
+}
+
+/*更多商品特價樣式*/
+.save1 {
+  color: var(--main);
+  margin-right: 10px;
+}
+
+/*更多相似卡片的樣式*/
+.ac1 {
+  width: 150px;
+  border-radius: 0;
+  border: 0;
+}
+
+/*更多相似卡片的樣式文字*/
+.ac2 {
+  padding: 6px 0 0 0;
+}
+
+/*更多相似卡片字的樣式*/
+.ps {
+  text-decoration-line: line-through;
+}
+
+/*商品介紹圖*/
+.introduce {
+  max-width: 690px;
+  height: 340px;
+  border: 0px solid blue;
+  overflow: hidden;
+}
+
+.introduce1 {
+  & img {
+    max-width: 100%;
+    min-height: auto;
+    object-fit: cover;
+  }
+}
+
+.cardText {
+  display: flex;
+  flex-wrap: wrap;
+}
+/*------------------------ 手機板切版----------------------------------*/
+
+@media screen and (max-width: 430px) {
+  .all-card2 {
+    display: none !important;
+  }
+
+  .rt {
+    margin-top: 20px;
+  }
+
+  /*手機板卡片*/
+  .all-card1 {
+    display: flex; /* 使用 flex 布局 */
+    flex-wrap: nowrap; /* 不换行 */
+    max-width: 410px; /* 最大宽度 */
+    overflow-x: auto; /* 水平滚动 */
+    overflow-y: hidden; /* 隐藏垂直滚动条 */
+    -webkit-overflow-scrolling: touch; /* 在iOS设备上启用平滑滚动 */
+    -ms-overflow-style: -ms-autohiding-scrollbar; /* IE和Edge中隐藏滚动条 */
+    scrollbar-width: auto; /* 隐藏滚动条 */
+    -ms-overflow-style: auto; /* 隐藏滚动条 */
+    padding-bottom: 40px; /* 添加底部內邊距 */
+  }
+}

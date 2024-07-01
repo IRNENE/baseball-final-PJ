@@ -1,0 +1,49 @@
+.wrap {
+  max-width: 960px;
+}
+
+.bt-eye {
+  right: 0;
+  top: 30px;
+  border: none;
+  background: transparent;
+}
+
+.bt {
+  border: none;
+  padding: 10px 15px;
+  width: 390px;
+  &:hover {
+    background: var(--main) !important;
+  }
+  &:active {
+    background: var(--active) !important;
+  }
+}
+
+.signup input {
+  border: none;
+  border-bottom: 1px solid;
+  border-radius: 0;
+  padding-bottom: 0 !important;
+}
+.signup input:focus {
+  box-shadow: none;
+  border-color: var(--main);
+}
+
+.signup select {
+  border: none;
+
+  &:focus {
+    border-bottom: 1px solid var(--main);
+    border-radius: 0;
+    box-shadow: none;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .signup {
+    margin-top: 110px;
+  }
+}

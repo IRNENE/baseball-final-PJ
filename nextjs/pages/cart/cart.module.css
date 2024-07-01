@@ -1,0 +1,39 @@
+.cart-container {
+  width: 1440px;
+  height: auto;
+  margin: 0 240px;
+  padding: 0;
+}
+
+@media (max-width: 576px) {
+  .cart-container {
+    width: 100%; /* 改为百分比宽度，更灵活地适应屏幕大小 */
+    margin: 0; /* 简化并调整外边距的写法 */
+    padding: 0 20px;
+    margin-bottom: 30px;
+  }
+}
+
+.cart-nav {
+  margin: 0;
+  padding: 0;
+  border-bottom: var(--active) 1px solid;
+}
+
+@media (max-width: 576px) {
+  .cart-nav {
+    display: none;
+  }
+}
+
+.cart-nav-group {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.cart-nav-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

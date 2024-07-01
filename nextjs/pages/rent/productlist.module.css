@@ -1,0 +1,295 @@
+.fc {
+  border-radius: 0;
+}
+.sc {
+  background-color: #625852;
+
+  border-radius: 0;
+}
+
+.pages1 {
+  color: #000;
+  margin-inline: 10px;
+}
+
+/*搜尋的按鈕*/
+.bt {
+  white-space: nowrap; /* 確保文字不換行 */
+  color: #fff;
+}
+
+.hm {
+  margin-right: 20px;
+}
+
+.save {
+  color: var(--main);
+}
+
+.ti {
+  display: flex;
+  justify-content: space-between;
+}
+
+.pt {
+  text-decoration: line-through;
+  margin: 0;
+}
+
+.cs {
+  display: flex;
+  border-radius: 0;
+  border: none;
+  height: 100%;
+  justify-content: space-between;
+}
+
+.ppx {
+  width: 129px;
+}
+
+/*滿版圖片*/
+.bi {
+  height: 630px;
+  max-width: 100%; /* 图片宽度最大为100% */
+  background-image: url(/images/rent/header.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover; /* 图像尺寸调整为尽可能填充容器，保持宽高比 */
+  margin-bottom: 70px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.dht {
+  display: flex;
+  flex-direction: column;
+  padding-left: 250px;
+}
+
+/*h1文字*/
+.bi1 {
+  margin-bottom: 100px;
+  color: white;
+}
+.bi2 {
+  margin-bottom: 80px;
+  color: white;
+}
+
+/*pagination樣式設定*/
+.p-item {
+  margin: 0 5px;
+}
+
+.p-link {
+  border: none;
+}
+
+.hrr {
+  width: 180px;
+}
+
+/*麵包屑*/
+.na {
+  height: 98px;
+}
+
+.heartButton {
+  height: 78px;
+}
+
+/*按鈕的form-check*/
+.form-check {
+  display: flex;
+  align-items: center;
+}
+
+/*複選框按鈕外觀*/
+.form-check-input {
+  width: 16px; /* 設置複選框的寬度 */
+  height: 16px; /* 設置複選框的高度 */
+  border-radius: 20px; /* 設置複選框的圓角為一半的高度，使其呈現圓形外觀 */
+  border: 1px solid #ccc;
+  background-color: #ffffff; /* 設置複選框的背景顏色 */
+  appearance: none; /* 隱藏複選框的預設外觀 */
+  margin-right: 8px;
+}
+
+/* 自定義已選中複選框的外觀 */
+.form-check-input[type='checkbox']:checked {
+  background-color: #fff; /* 設置已選中複選框的背景顏色 */
+  border: 5px solid var(--main);
+}
+
+.cit {
+  border-radius: 0; /* 去除圆角 */
+  width: 100%; /* 讓圖片寬度適應父容器 */
+  height: 276px; /* 根據寬度自動調整高度 */
+  object-fit: cover; /* 確保圖片覆蓋整個容器 */
+}
+
+.pcl {
+  height: 400px; /* 设置固定高度 */
+  display: flex;
+  align-items: stretch;
+}
+
+/*手機板-----------------------------------------------*/
+
+@media screen and (max-width: 430px) {
+  /*滿版圖片*/
+  .bi {
+    width: 100%;
+    max-height: 340px; /* 让背景图像高度自动调整以保持宽高比 */
+    background-image: url(/images/rent/header.jpg);
+    background-size: cover; /* 图像尺寸调整为尽可能填充容器，保持宽高比 */
+    background-repeat: no-repeat;
+    background-position: center;
+    margin-top: 88px; /* 可根据需求调整距离頂部的
+    距离 */
+    margin-bottom: 30px;
+  }
+
+  .dht {
+    padding-left: 20px;
+    width: 290px;
+  }
+  /*大圖的文字*/
+  .bi1 {
+    margin-bottom: 40px;
+    color: white; /* 设置标题和副标题的颜色为白色 */
+  }
+
+  .bi2 {
+    color: white; /* 设置标题和副标题的颜色为白色 */
+  }
+
+  /*左半部電腦版搜索*/
+  .left-half {
+    display: none !important;
+  }
+  /*右上搜尋*/
+  .u-right {
+    display: none !important;
+  }
+  .bp {
+    display: none !important;
+  }
+  /*手機全部商品*/
+  .allp {
+    margin-bottom: 28px;
+  }
+  /*手機板搜尋*/
+  .alls {
+    margin-bottom: 20px;
+  }
+  /*手機板的篩選*/
+  .p-filter {
+    background-color: #f6f6f6;
+  }
+
+  /*手機板的篩選*/
+  .col1 {
+    color: var(--gray);
+    padding: 10px 12px;
+  }
+
+  /*手機板的篩選分隔線*/
+  .col2 {
+    color: var(--gray);
+    padding: 10px 12px;
+    border-left: 1px solid var(--black);
+    border-right: 1px solid var(--black);
+  }
+
+  .nc {
+    display: none;
+  }
+
+  .hm {
+    display: block;
+    margin-right: 20px;
+  }
+
+  /*手機板共???件商品*/
+  .pcom {
+    margin: 16px 0 0 10px;
+  }
+
+  .layoutWrap {
+    display: none;
+  }
+
+  /*手機版排序的彈出視窗*/
+  .md1 {
+    margin-top: 100px;
+  }
+
+  .md {
+    margin-top: 100px;
+    width: 250px;
+    margin-left: 90px;
+  }
+
+  /*手機版排序的彈出視窗的頭*/
+  .mh {
+    position: relative;
+    display: flex;
+    justify-content: center;
+  }
+
+  /*手機版排序的彈出視窗的叉叉*/
+  .bc {
+    margin: 0 !important;
+  }
+
+  /*手機版篩選分類樣式*/
+  .pcb {
+    border: none; /* 移除按钮的边框 */
+    background-color: transparent; /* 设置背景为透明 */
+    padding: 0; /* 移除内边距 */
+    cursor: pointer; /* 设置鼠标样式为手型 */
+    height: 30px; /* 设置按钮高度 */
+    width: 100%; /* 设置按钮宽度 */
+    display: flex;
+    justify-content: space-between;
+    /* 可以添加其他样式，如颜色、字体等 */
+  }
+
+  /*移除黑點*/
+  .nl {
+    list-style-type: none;
+    padding-left: 0;
+  }
+  .dd1 {
+    text-decoration: none;
+    margin-top: 6px;
+    margin-left: 9px;
+  }
+}
+
+/*不讓手機板的篩選出現在電腦版*/
+@media screen and (min-width: 431px) {
+  .alls {
+    display: none !important;
+  }
+
+  /* 隐藏全部商品标题 */
+  .allp {
+    display: none;
+  }
+  .p-filter {
+    display: none !important;
+  }
+
+  .p-pl {
+    display: none;
+  }
+
+  /*手機板共???件商品*/
+  .pcom {
+    display: none;
+  }
+}

@@ -1,0 +1,130 @@
+.cart-container {
+  width: 1440px;
+  height: auto;
+  margin: 0 240px;
+  padding: 0;
+
+  margin-bottom: 40px;
+}
+@media (max-width: 576px) {
+  .cart-container {
+    width: 100%; /* 改为百分比宽度，更灵活地适应屏幕大小 */
+    margin: 0; /* 简化并调整外边距的写法 */
+    padding: 0 20px;
+    margin-bottom: 30px;
+    margin-top: 110px;
+  }
+}
+
+.cart-nav {
+  margin: 0;
+  padding: 0;
+  border-bottom: var(--main) 1px solid;
+  padding-bottom: 15px;
+}
+
+.cart-nav-order {
+  padding: 0;
+  margin: 0;
+  border-bottom: var(--main) 1px solid;
+}
+.cart-nav-order h4 {
+  padding-bottom: 15px;
+}
+
+@media (max-width: 576px) {
+  .cart-nav {
+    display: none;
+  }
+}
+
+.cart-nav-group {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.user-info input[type='text'] {
+  width: 100%; /* 确保输入框填满单元格 */
+  box-sizing: border-box; /* 边框和内边距不再增加元素宽度 */
+}
+
+.user-info p {
+  margin: 0;
+}
+
+.user-info td {
+  padding: 8px;
+  border: 1px solid #ccc;
+}
+.user-info tr {
+  height: 40px;
+  border: 1px solid #ccc;
+}
+/*  */
+.cart-nav-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+/*  */
+.payment-btn {
+  font-size: var(--h6);
+  background: #fffefe;
+}
+@media (max-width: 576px) {
+  .payment-btn {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    background: #ffffff;
+    width: 100vw; /* 確保固定元素全屏寬 */
+    z-index: 9999; /* 使元素保持在最上層 */
+    border: var(--brown) 1px solid;
+  }
+  .btn-style {
+    justify-content: flex-end;
+    align-items: center;
+  }
+
+  .btn-style h6 {
+    margin-right: 15px;
+  }
+  .btn {
+    border: none;
+    background: var(--main);
+    color: var(--gray-light);
+    padding: 10px 15px;
+    margin: 0;
+    height: 70px;
+  }
+}
+
+.btn {
+  border: none;
+  background: var(--main);
+  color: var(--gray-light);
+  padding: 10px 15px;
+  margin: 0;
+}
+@media (min-width: 576px) {
+  .btn-style {
+    justify-content: flex-end;
+    margin: 20px 0;
+  }
+  .attn {
+    padding-right: 100px;
+  }
+}
+
+.order-description {
+  text-align: right;
+  padding-left: 700px;
+}
+@media (max-width: 576px) {
+  .order-description {
+    text-align: right;
+    padding-left: 0px;
+  }
+}

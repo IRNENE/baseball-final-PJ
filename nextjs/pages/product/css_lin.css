@@ -1,0 +1,188 @@
+.ch{
+    width: 430px;
+    height: 610px;
+    border: 1px solid red;
+}
+.titlee{
+    width: 400px;
+    display: flex;
+    justify-content: center;
+    margin-inline: auto;
+    border: 0px solid red;
+    margin-top: 7px;
+    position: relative;
+}
+
+.brand{
+    width: 360px;
+    height: 145px;
+    margin-inline: auto;
+
+}
+.price{
+    width: 360px;
+    height: 120px;
+    margin-inline: auto;
+    
+}
+.color{
+    width: 360px;
+    height: 100px;
+    margin-inline: auto;
+   
+}
+.hh{
+    width: 360px;
+    margin-inline: auto;
+}
+.brand-options {
+    display: flex;
+    margin-block: 2px;
+    
+}
+
+.brand-option {
+    flex-grow: 1; /* 將每個品牌選項的寬度均分 */
+     /* 如果需要，使文本居中 */
+     width: 120px;
+     white-space: nowrap;
+}
+.brr{
+    margin-right: 5px;
+}
+.btn1{
+    width: 100px;
+}
+.btn2{
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+/* ------------------------------------------------------------------- */
+
+.ch1{
+    width: 430px;
+    height: 480px;
+    border: 1px solid red;
+}
+.btn3{
+    width: 160px;
+    
+}
+/* ------------------------------------------------------------------ */
+.ch3{
+    width: 230px;
+    height: 200px;
+    border: 1px solid red;
+}
+.titlee1{
+    width: 220px;
+    display: flex;
+    justify-content: center;
+    margin-inline: auto;
+    border: 0px solid red;
+    margin-top: 7px;
+    position: relative;
+}
+.btn4{
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+.order{
+    width: 130px;
+    /* height: 127px; */
+    margin-inline: auto;
+    border:0px solid blue;
+    margin-block: 7px;
+}
+.ooder1{
+    margin-right: 6px;
+    border:0px solid blue;
+}
+
+
+/* ------------------------------------- */
+
+.ch4{
+    width: 430px;
+    height: 932px;
+    border: 1px solid red;
+}
+.ch5{
+    width: 311px;
+    height: 254px;
+    border: 1px solid red;
+    margin-inline: auto;
+    margin-top:40px;
+}
+
+.ssear{
+    background-color: #f0f0f0;
+    border-radius: 20px;
+    padding: 3px;
+    display: flex;
+    align-items: center;
+    width: 250px;
+    
+}
+
+.sear-options {
+    display: flex;
+    margin-block: 9px;
+    
+}
+
+.sear-option {
+    flex-grow: 1; /* 將每個品牌選項的寬度均分 */
+     /* 如果需要，使文本居中 */
+    height: 30px;
+    width:  69px;
+
+     /* white-space: nowrap; */
+    
+     background-color: #f0f0f0; /* 設定背景顏色 */
+    border-radius: 20px; /* 設定藥丸形狀的邊框半徑 */
+    padding: 5px 5px ; /* 適當的內邊距 */
+    margin: 5px 5px 5px 5px; /* 適當的外邊距 */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.seee {
+    text-align: center; /* 文字置中對齊 */
+    height: 10px;
+    width:  69px;
+    
+}
+
+.inin{
+    padding: 8px;
+    border: none; /* 移除邊框線 */
+    outline: none;
+    background-color: #f0f0f0;
+    border-radius: 20px;
+}
+.bubu{
+    padding: 8px 8px 8px 8px;
+    border: none; /* 移除邊框線 */
+    outline: none;
+    
+    margin-left: auto;
+    background-color: white;
+    
+}
+.iii{
+    margin-left: 6px;
+    background-color: #f0f0f0;
+    border-radius: 20px;
+    
+}
+
+.hhh{
+    margin-top: 15px;
+}
+
+

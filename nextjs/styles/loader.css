@@ -1,0 +1,32 @@
+.bb-loader-bg {
+  content: '';
+  width: 100%;
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  /* margin-bottom: 40px; */
+  /* margin-top: 56px; */
+  background-color: #4e5052eb;
+  z-index: 9999;
+}
+.bb-loader {
+  /* display: block; */
+  position: absolute;
+  top: calc(50% - 5em);
+  left: calc(50% - 8.5em);
+  width: auto;
+  height: 10em;
+  font-weight: bold;
+  display: inline-block;
+}
+.bb-loader-hide {
+  display: none;
+}
+
+@media screen and (max-width: 576px) {
+  .bb-loader {
+    left: 130px;
+  }
+}

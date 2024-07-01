@@ -1,0 +1,5 @@
+.focus:focus-visible {
+    /* 改变聚焦状态下的样式，例如边框颜色 */
+    outline: none ; 
+    /* box-shadow:none ;  */
+}

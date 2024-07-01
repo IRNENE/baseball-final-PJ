@@ -1,0 +1,76 @@
+.btn-position {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.btn {
+  width: 124px;
+  height: 52px;
+  background: var(--main);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.btn h6 {
+  color: white;
+  text-align: center;
+  align-self: center;
+}
+
+@media (max-width: 576px) {
+  .cart-nav {
+    display: none;
+  }
+}
+
+.cart-nav-group {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.cart-nav {
+  border-bottom: var(--main) 1px solid;
+}
+.order-container {
+  width: 1440px;
+  height: auto;
+  margin: 50px 240px;
+}
+@media (max-width: 576px) {
+  .order-container {
+    width: 400px;
+    height: auto;
+    margin: 0 15px;
+    margin-bottom: 30px;
+    margin-top: 110px;
+  }
+}
+.order-item {
+  padding-top: 15px;
+  border-top: var(--main) 1px solid;
+  border-bottom: var(--main) 1px solid;
+}
+
+@media (max-width: 576px) {
+  .order-item {
+    display: none;
+  }
+  .order {
+    display: none;
+  }
+}
+.cart-nav-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--main);
+}
+.line-btn {
+  width: 100px; /* 设置按钮宽度 */
+  height: 25px; /* 设置按钮高度 */
+  padding-top: 0;
+  border: none;
+  background: none; /* 移除按钮背景 */
+}

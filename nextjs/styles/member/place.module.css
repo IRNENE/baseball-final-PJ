@@ -1,0 +1,99 @@
+.top {
+  background-image: url('/images/baseball/place.png');
+  height: 628px;
+  background-position: center;
+  background-size: cover;
+  & div {
+    padding-top: 200px;
+  }
+}
+
+.imgBig {
+  width: 450px;
+  height: 300px;
+  /* border: 1px solid black; */
+}
+.imgSmall {
+  max-width: 120px;
+  max-height: 80px;
+  &:hover {
+    border: 1px solid var(--active);
+  }
+}
+.imgBox img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.left {
+  margin-left: 100px;
+}
+.right {
+  margin-left: 100px;
+}
+.bt {
+  border: none;
+  padding: 10px 20px;
+  &:hover {
+    background: var(--main) !important;
+  }
+  &:active {
+    background: var(--active) !important;
+  }
+}
+.icon {
+  width: 30px;
+  height: 30px;
+}
+.iconB {
+  width: 30px;
+  height: 30px;
+}
+.iconPark {
+  color: rgb(10, 10, 250);
+}
+
+.iconMan {
+  color: rgb(0, 119, 255);
+}
+
+.iconWoman {
+  color: rgb(228, 54, 226);
+}
+
+@media screen and (max-width: 576px) {
+  .top {
+    height: 300px;
+    margin-top: 88px;
+    & div {
+      padding-top: 80px;
+    }
+  }
+  .imgBig {
+    max-width: 400px;
+    max-height: 300px;
+    border: 1px solid black;
+  }
+  .imgSmall {
+    max-width: 120px;
+    max-height: 90px;
+    border: 1px solid black;
+  }
+  .imgBox img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  .left {
+    margin-left: 0px;
+  }
+  .right {
+    margin-left: 10px;
+    & h2 {
+      font-size: var(--h3);
+    }
+    & h4 {
+      font-size: var(--h5);
+    }
+  }
+}

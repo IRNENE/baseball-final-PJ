@@ -1,0 +1,300 @@
+@media screen and (max-width: 768px) {
+  .bodyMT {
+    margin-top: 88px !important;
+    margin-bottom: 20px !important;
+  }
+
+  .orderFirst {
+    order: 1 !important;
+  }
+
+  .orderLast {
+    order: 6 !important;
+  }
+
+  .topCard {
+    height: 350px !important;
+  }
+
+  .topCard-s {
+    height: 180px !important;
+
+    & .cardTitle {
+      & p {
+        display: none;
+      }
+    }
+  }
+  .cardFlex {
+    flex-direction: row !important;
+    margin-top: 10px !important;
+    gap: 10px !important;
+  }
+
+  .mainCard1 {
+    & .mainCard1Text {
+      padding-right: 0 !important;
+      text-align: center !important;
+    }
+
+    & .mainCard1Img {
+      padding-left: 0 !important;
+      margin-bottom: 18px !important;
+    }
+
+    & button {
+      margin-inline: auto !important;
+    }
+  }
+
+  .mainCard2 {
+    & .mainCard2Text {
+      padding-left: 0 !important;
+      text-align: center !important;
+    }
+
+    & .mainCard2Img {
+      padding-right: 0 !important;
+      margin-bottom: 18px !important;
+    }
+
+    & button {
+      margin-inline: auto !important;
+    }
+  }
+
+  .articleText {
+    -webkit-line-clamp: 3 !important; /* 指定顯示的行數 */
+  }
+
+  .articleMaxWidth {
+    max-width: 440px;
+  }
+
+  .navItem {
+    padding-inline: 15px !important;
+    margin-top: 16px;
+  }
+}
+
+.bodyMT {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.bold-text {
+  font-weight: bold;
+}
+
+.navItem {
+  padding-inline: 24px;
+}
+
+/* 上方卡片 */
+.topCard {
+  width: 100%;
+  height: 500px;
+  position: relative;
+
+  & .cardTitle {
+    & h4 {
+      display: -webkit-box;
+      -webkit-line-clamp: 2; /* 指定顯示的行數 */
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+      text-overflow: ellipsis; /* 顯示省略號 */
+    }
+  }
+
+  & img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.topCard-s {
+  width: 100%;
+  height: 238px;
+  position: relative;
+  margin-bottom: 24px;
+
+  & img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+  }
+
+  .cardTitle {
+    & h5 {
+      display: -webkit-box;
+      -webkit-line-clamp: 2; /* 指定顯示的行數 */
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+      text-overflow: ellipsis; /* 顯示省略號 */
+    }
+
+    & h5 {
+      margin-bottom: 5px;
+    }
+
+    & p {
+      margin-top: 8px;
+      padding-top: 0px;
+      margin-bottom: 0;
+    }
+  }
+}
+
+.cardTitle {
+  background: rgb(97, 87, 81);
+  background: linear-gradient(
+    0deg,
+    rgba(97, 87, 81, 1) 0%,
+    rgba(97, 87, 81, 0.5578606442577031) 100%
+  );
+  width: 100%;
+  padding-inline: 20px;
+  padding-block: 10px;
+  color: #c4c4c4;
+  position: absolute;
+  bottom: 0;
+  z-index: 99;
+  /* transition: background 0.2s, color 0.2s; */
+
+  & h4 {
+    margin-bottom: 14px;
+  }
+
+  & p {
+    margin-top: 14px;
+    padding-top: 12px;
+    margin-bottom: 0;
+  }
+}
+
+.topCard:hover {
+  .cardTitle {
+    background: hsl(23, 9%, 35%);
+    color: rgba(255, 255, 255, 0.9);
+  }
+}
+
+.topCard-s:hover {
+  .cardTitle {
+    background: hsl(23, 9%, 35%);
+    color: rgba(255, 255, 255, 0.9);
+  }
+}
+
+/* 主要文章卡片列表 */
+.mainCard1 {
+  color: var(--text);
+  padding-block: 20px;
+
+  &:hover {
+    background-color: #d6d6d68e;
+    transition: background-color 0.35s;
+
+    .btn-mydark {
+      transition: background-color 0.35s;
+      background-color: var(--main);
+    }
+  }
+
+  & .mainCard1Text {
+    padding-right: 40px;
+    width: 100%;
+    height: 100%;
+
+    & h5 {
+      margin-bottom: 10px;
+    }
+
+    & h6 {
+      letter-spacing: 1px;
+      line-height: 1.7;
+    }
+
+    & p {
+      margin-top: 10px;
+      /* margin-bottom: 24px; */
+    }
+  }
+
+  & .mainCard1Img {
+    padding-left: 40px;
+    max-width: 695.5px;
+    height: 350px;
+
+    & img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+}
+
+.mainCard2 {
+  color: var(--text);
+  padding-block: 20px;
+
+  &:hover {
+    background-color: #d6d6d68e;
+    transition: background-color 0.35s;
+
+    .btn-mydark {
+      transition: background-color 0.35s;
+      background-color: var(--main);
+    }
+  }
+
+  & .mainCard2Text {
+    padding-left: 40px;
+    width: 100%;
+    height: 100%;
+
+    & h5 {
+      margin-bottom: 10px;
+    }
+
+    & h6 {
+      letter-spacing: 1px;
+      line-height: 1.7;
+    }
+
+    & p {
+      margin-top: 10px;
+      /* margin-bottom: 24px; */
+    }
+  }
+
+  & .mainCard2Img {
+    padding-right: 40px;
+    max-width: 695.5px;
+    height: 350px;
+
+    & img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+}
+
+.articleText {
+  display: -webkit-box;
+  -webkit-line-clamp: 6; /* 指定顯示的行數 */
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis; /* 顯示省略號 */
+  margin-bottom: 30px;
+}
+
+.btn-mydark {
+  padding-inline: 15px;
+  padding-block: 10px;
+  color: #fff;
+  background-color: var(--black);
+  border: none;
+}

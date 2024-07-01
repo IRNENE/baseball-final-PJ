@@ -1,0 +1,260 @@
+@media (max-width: 576px) {
+  .coupon-space {
+    margin: 5px 0;
+    padding: 0;
+  }
+}
+
+@media (min-width: 570px) {
+  .coupon-space {
+    margin: 0;
+    padding: 0;
+    margin-top: 40px;
+  }
+  .input-space {
+    display: flex;
+    align-items: center;
+    position: relative; /* 使其子元素可以使用絕對定位 */
+  }
+
+  .coupon-code {
+    width: 150px;
+  }
+  .input-code-error {
+    position: absolute;
+    bottom: -50px; /* 根據需要調整位置 */
+    left: 110px;
+  }
+}
+
+.input-code-error {
+  color: var(--main);
+}
+.coupon-amount h6 span {
+  color: var(--main);
+}
+@media (max-width: 576px) {
+  .coupon-amount {
+    text-align: center;
+    margin-top: 5px;
+  }
+  .input-code-error {
+    color: var(--main);
+    position: absolute;
+    bottom: -20px; /* 根據需要調整位置 */
+    left: 10px;
+  }
+  .input-space {
+    display: flex;
+    align-items: flex-start;
+    position: relative; /* 使其子元素可以使用絕對定位 */
+  }
+  .coupon-code {
+    margin-right: 30px;
+  }
+}
+.coupon-button-used button {
+  background: none; /* 移除背景色 */
+  border: none; /* 移除邊框 */
+  padding: 0; /* 可选：移除内边距 */
+  color: inherit; /* 可选：继承文字颜色 */
+  border-bottom: var(--main) 4px solid;
+  font-size: 16px;
+}
+
+.coupon-button-unused button {
+  background: none; /* 移除背景色 */
+  border: none; /* 移除邊框 */
+  padding: 0; /* 可选：移除内边距 */
+  color: inherit; /* 可选：继承文字颜色 */
+  border-bottom: var(--main) 4px solid;
+  font-size: 16px;
+}
+
+.sort {
+  font-size: var(--p);
+}
+.coupon-input-box {
+  display: flex;
+  align-items: start;
+}
+
+@media (min-width: 570px) {
+  .coupon-input-box button {
+    margin-left: 30px;
+    border-radius: 0;
+    color: #ffffff;
+    height: 35px;
+  }
+
+  .input-code-erorr {
+    text-align: center;
+    margin-top: 5px;
+  }
+  .code-btn {
+    width: 70px;
+  }
+}
+
+@media (max-width: 570px) {
+  .coupon-input-box {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 10px;
+  }
+
+  .coupon-input-box .input-space {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .input-space input {
+    width: 160px;
+    height: 36px;
+  }
+  .input-space label {
+    align-self: center;
+  }
+  .coupon-input-box h6 {
+    margin: 0; /* 移除默認邊距 */
+    white-space: nowrap;
+    width: 100%;
+    text-align: center;
+    align-self: center;
+  }
+  .coupon-input-box button {
+    margin-left: 5px;
+    border-radius: 0;
+    color: #ffffff;
+    height: 35px;
+  }
+  .input-code-erorr-rwd {
+    text-align: center;
+  }
+}
+
+.coupon-group {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+
+  height: auto;
+}
+.coupon {
+  border: var(--brown) 1px solid;
+  width: 450px;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+@media (max-width: 576px) {
+  .coupon {
+    width: 400px;
+    height: 130px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: var(--brown) 1px solid;
+    margin-bottom: 20px;
+  }
+}
+
+.coupon-item {
+  width: 320px;
+  height: 130px;
+  background: var(--gray-light);
+  padding-left: 50px;
+  margin: 0;
+  line-height: 5px;
+  text-align: left;
+}
+
+@media (max-width: 576px) {
+  .coupon-item {
+    width: calc(400px - 120px);
+    height: 130px;
+    background: var(--gray-light);
+    display: flex;
+    flex-direction: column;
+    /* justify-content: flex-start; */
+    align-items: center;
+    padding: 0;
+    margin: 0;
+    line-height: 5px;
+    text-align: left;
+  }
+}
+
+.coupon-unused {
+  width: 130px;
+  height: 130px;
+  background-color: var(--main);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-left: var(--gray) 2px dotted;
+}
+.coupon-used {
+  width: 130px;
+  height: 130px;
+  background-color: var(--brown);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-left: var(--gray) 2px dotted;
+}
+
+.coupon-unused .coupon-used h5 {
+  font-size: var(--h5);
+  margin: 0;
+  color: white;
+}
+
+@media (max-width: 576px) {
+  .tab {
+    margin-top: 40px;
+  }
+  .coupon-unused {
+    width: 120px;
+    height: 130px;
+    background-color: var(--main);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-left: var(--gray) 2px dotted;
+  }
+  .coupon-used {
+    width: 120px;
+    height: 130px;
+    background-color: var(--brown);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-left: var(--gray) 2px dotted;
+  }
+  .select-sort {
+    margin-top: 10px;
+    font-size: 15px;
+    width: 60px;
+  }
+}
+.boxMargin {
+  margin: 60px 0;
+}
+.bread {
+  color: var(--main);
+}
+.noBottom {
+  color: var(--text);
+  text-decoration: none;
+}
+.select-sort {
+  font-size: 18px;
+}

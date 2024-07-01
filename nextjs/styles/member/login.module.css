@@ -1,0 +1,68 @@
+.left {
+  left: 10px !important;
+}
+.wrap {
+  max-width: 430px;
+}
+.login a {
+  text-decoration: none;
+}
+
+.bt-eye {
+  right: 0;
+  top: 30px;
+  border: none;
+  background: transparent;
+}
+
+.login input {
+  border: none;
+  border-bottom: 1px solid;
+  border-radius: 0;
+  padding-bottom: 0 !important;
+  &:focus {
+    box-shadow: none;
+    border-color: var(--main);
+  }
+}
+.log {
+  border: none;
+  width: 100%;
+  &:hover {
+    background: var(--main) !important;
+  }
+  &:active {
+    background: var(--active) !important;
+  }
+}
+.verify {
+  border: none;
+  &:hover {
+    background: var(--main) !important;
+  }
+  &:active {
+    background: var(--active) !important;
+  }
+}
+.verify-disabled {
+  border: none;
+  background: var(--brown) !important;
+  &:hover {
+    background: none;
+  }
+}
+
+.google {
+  border: none;
+  background: none;
+}
+
+.line {
+  color: #06c755;
+}
+
+@media screen and (max-width: 576px) {
+  .login {
+    margin-top: 110px;
+  }
+}

@@ -1,0 +1,21 @@
+.on {
+  /* 利用CSS的變數來套用動態的color屬性 */
+  color: #ee3e27
+  
+  /* color: gold; */
+}
+
+.off {
+  color: #f6f6f6;
+}
+
+.good-style{
+  color:#ee3e27;
+}
+
+.star-btn{
+  background-color: transparent;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}

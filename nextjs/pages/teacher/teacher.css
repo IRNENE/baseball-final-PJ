@@ -1,0 +1,87 @@
+.teacher-nav-img-card-sun {
+  max-width: 1920px;
+  height: 628px;
+  background-repeat: no-repeat;
+  background-size: cover; /* 或 contain */
+  background-position: center; /* 將背景圖像居中 */
+  background-image: url('/images/teacher/教練03.jpeg');
+  background-size: 100%;
+  padding-top: 250px;
+  margin-bottom: 79px;
+  .teacher-nav-img-card-text-sun {
+    width: 367px;
+    height: 135px;
+    margin-left: 124px;
+    color: #fff;
+  }
+}
+.teacher-title-text-sun {
+  height: 127px;
+  border-bottom: 1px solid #000;
+  margin-bottom: 79px;
+}
+.teacher-card-img-sun {
+  width: 377px;
+  height: 400px;
+  & img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+.teacher-card-text-sun {
+  background: #f6f6f6;
+  width: 377px;
+  height: 340px;
+  h4 {
+    line-height: 2;
+  }
+  h5 {
+    line-height: 2;
+  }
+}
+.teacher-card-text-description-sun {
+  display: -webkit-box;
+
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 5; /* 指定顯示的行數 */
+  overflow: hidden; /* 隱藏溢出的文本 */
+}
+.react-multiple-carousel__arrow--left {
+}
+.teacher-Carousel-sun {
+  padding-inline: 0px;
+}
+@media (max-width: 576px) {
+  .teacher-nav-img-card-sun {
+    width: 430px;
+    height: 340px;
+    padding-top: 150px;
+    /* background-repeat: no-repeat !important; */
+    background-size: cover !important; /* 或 contain */
+    background: url('/images/teacher/教練03.jpeg');
+    
+    .teacher-nav-img-card-text-sun {
+      margin-left: 50px;
+      width: 367px;
+      height: 135px;
+      color: #fff;
+      & h1 {
+        /* font-size: 30px; */
+      }
+      & h4 {
+        /* font-size: 16px; */
+      }
+    }
+  }
+  .teacher-title-text-sun {
+    height: 50px;
+    margin-bottom: 30px;
+  }
+  .teacher-card-img-sun {
+    height: 350px;
+  }
+  .teacherTop {
+    margin-top: 88px;
+  }
+}

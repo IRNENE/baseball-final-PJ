@@ -1,0 +1,173 @@
+.boxMargin {
+  margin: 60px 0;
+}
+.tabsMargin {
+  margin-top: 70px;
+}
+.bread {
+  color: var(--main);
+}
+
+.left11,
+.left2,
+.left3,
+.left4,
+.left5 {
+  color: var(--text);
+  border-bottom: 1px solid #91857f;
+  padding: 20px 0 20px 15px;
+  text-align: start;
+  & h6 {
+    color: var(--text);
+  }
+}
+.noBottom {
+  text-decoration: none;
+}
+.cardPhoto {
+  background-color: var(--gray);
+  border-radius: 50%;
+  width: 130px;
+  height: 130px;
+}
+.cardBody {
+  display: flex;
+}
+
+.color {
+  background: var(--main);
+  color: var(--gray-light);
+  border: none;
+  padding: 10px 0;
+}
+.color2 {
+  background: var(--main);
+  color: var(--gray-light);
+  border: none;
+}
+.btnSubmit {
+  padding: 10px 15px;
+}
+.btnColor2 {
+  background: #91857f;
+  color: var(--gray-light);
+  border: none;
+}
+.ulBorder {
+  border-bottom: solid #d0d5dd 1px;
+}
+.trColor {
+  background: var(--main);
+  color: var(--gray-light);
+}
+.perpageColor {
+  color: #91857f;
+  font-size: 14px;
+}
+
+.titNub {
+  border-left: solid #ee3e27 9px;
+  line-height: 25px;
+}
+
+.memberProfile {
+  border-bottom: dotted var(--text) 1px;
+}
+.infoBox {
+  padding: 15px 35px;
+}
+
+.infoBoxImg {
+  width: 90px;
+  height: 90px;
+  & img {
+    width: 100%;
+  }
+}
+.infoCourseImg {
+  width: 140px;
+  height: 140px;
+  & img {
+    width: 100%;
+  }
+}
+.active1 {
+  border-bottom: solid #ee3e27 3px;
+}
+.subtotal {
+  border-bottom: solid #d9d9d9 1px;
+}
+.varText {
+  color: var(--text);
+}
+.cardCoupon {
+  width: 320px;
+  height: 130px;
+  border: solid var(--text) 1px;
+}
+
+.couponState {
+  width: 130px;
+  height: 130px;
+  line-height: 130px;
+  color: var(--gray-light);
+  background: var(--main);
+}
+
+/* RWD CSS */
+
+@media screen and (max-width: 431px) {
+  .leftSide {
+    /* display: none; */
+    width: 300px;
+    max-height: 100vh;
+    background-color: var(--gray-light);
+    border-right: 2px solid #d1d1d1;
+    padding: 50px 0;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 5px 0 5px rgba(23, 23, 54, 0.6);
+    top: 88px;
+    position: fixed; /* label 定位在這個上 */
+    transform: translateX(-100%); /* 將leftSide 左橫移100% 到螢幕外 */
+    transition: 0.1s; /* 側邊選單開合的時間 */
+    z-index: 99;
+  }
+  .leftSideBtn {
+    max-width: 20px;
+    height: 80px;
+    background-color: #d1d1d1;
+    color: #686666;
+    position: absolute; /* 絕對定位在leftSide上 */
+    /* right: -20px; */
+    left: 303px;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    line-height: 80px;
+    text-align: center;
+    border-radius: 0 5px 5px 0;
+    box-shadow: 5px 0 5px rgba(23, 23, 54, 0.6);
+  }
+  #leftSideActive {
+    position: absolute;
+    opacity: 0; /* 使checkbox 透明 */
+    z-index: -1; /* 為了保險不要讓該功能還選得到，可將其排序往後跳 */
+  }
+  #leftSideActive:checked + .leftSide {
+    transform: translateX(0);
+    /* 當我點擊 leftSide 時，checkbox會啟動id，讓側邊選單出來 */
+    & label {
+      transform: scaleX(-1);
+      /* 使 label內圖案橫向反轉 */
+    }
+  }
+}
+
+/* 桌機 CSS */
+
+@media screen and (min-width: 432px) {
+  .leftSideBtn {
+    display: none;
+  }
+}

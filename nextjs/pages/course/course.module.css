@@ -1,0 +1,285 @@
+.navberImgSun {
+  background-image: url('/images/course/滿版圖.jpg');
+  width: 1920;
+  height: 628px;
+  margin-bottom: 85px;
+  padding-top: 200px;
+
+  & img {
+    width: 100%;
+    height: 100%;
+  }
+}
+.navberImgTextSun {
+  margin-left: 124px;
+  & h1 {
+    display: flex;
+    align-items: center;
+    width: 367px;
+    height: 109px;
+    color: #fff;
+  }
+  & h4 {
+    display: flex;
+    align-items: center;
+    width: 367px;
+    height: 109px;
+    color: #fff;
+  }
+}
+
+.breadcrumbItem {
+  & ol {
+    & li {
+      font-size: 20px;
+      font-weight: bold;
+      & a {
+        color: #000000;
+        text-decoration: none;
+      }
+    }
+  }
+}
+
+.SearchSun {
+  margin-bottom: 45px;
+}
+
+.SearchBtnSun {
+  color: #fff !important;
+  background-color: #91857f !important;
+}
+
+.hr {
+  border-color: #000000; /* 將顏色屬性改為 border-color */
+  margin-bottom: 85px;
+}
+
+.main2Sun {
+  height: auto;
+  margin-top: 85px;
+}
+
+.filterSun {
+  width: 297px;
+  margin-right: 122px;
+}
+
+.TypeCardSun {
+  width: 41px;
+  height: 71px;
+  display: grid;
+  margin-left: 25px;
+  place-items: center;
+  /* & img{
+        width: 25px;
+        height: 25px;
+    } */
+}
+
+.TypeSun {
+  margin-bottom: 16px;
+  cursor: pointer;
+}
+.TypeBtnSun {
+  display: none;
+}
+
+.CourseCardSun {
+  width: 900px; /* 添加適當的單位 */
+
+  padding-right: 10px;
+  background-color: #f6f6f6;
+  margin-bottom: 10px;
+}
+.CourseCardImg {
+  margin-right: 90px;
+  & img {
+    width: 203px;
+    height: 218px;
+  }
+}
+.CourseCardTextSun {
+  margin-block: 13px;
+  width: 582px;
+  margin-right: 90px;
+  & p {
+    margin-bottom: 4px;
+  }
+}
+.courseNameText {
+  color: #ee3e27;
+}
+.btnBox {
+  width: 297px;
+}
+.CourseCardPrice {
+  color: #ee3e27;
+  font-weight: bold;
+}
+.CourseCardFavorite {
+  width: 25px;
+  height: 25px;
+  display: flex;
+  justify-content: center;
+  & img {
+    width: 25px;
+    height: 100%;
+    cursor: pointer;
+  }
+}
+.CourseCardFavoriteAndPrice {
+  width: 20px;
+  background-color: #f6f6f6;
+  padding-top: 10px;
+  padding-inline: 10px;
+  height: auto;
+  margin-bottom: 10px;
+}
+.PriceDateBtn {
+  display: none;
+}
+.AllFifterSm {
+  display: none;
+}
+.brData {
+  display: none;
+}
+.description {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3; /* 指定顯示的行數 */
+  overflow: hidden; /* 隱藏溢出的文本 */
+}
+.pages {
+  color: #000;
+  margin-inline: 10px;
+}
+@media (max-width: 576px) {
+  .navberImgSun {
+    background-image: url('/images/course/滿版圖430px.png');
+    width: 430px;
+    height: 340px;
+    padding-top: 150px;
+    margin-top: 88px;
+    margin-bottom: 85px;
+    background-position: center;
+  }
+  .navberImgTextSun {
+    margin-left: 50px;
+    & h1 {
+      display: flex;
+
+      width: 367px;
+      height: 0px;
+      margin-bottom: 50px;
+      color: #fff;
+    }
+    & h4 {
+      display: flex;
+      align-items: center;
+      width: 367px;
+      height: 109px;
+      color: #fff;
+    }
+  }
+  .breadcrumbItem {
+    & ol {
+      & li {
+        font-size: 24px;
+        & a {
+          color: #000000;
+        }
+      }
+    }
+  }
+  .formControl {
+    width: 300px;
+  }
+  .main1Sun {
+    max-width: 430px;
+    display: block !important ;
+  }
+  .TypeSun {
+    display: none !important;
+  }
+  .main2Sun {
+    height: auto;
+    display: none;
+  }
+  .TypeBtnSun {
+    display: block;
+  }
+  .PriceDateBtn {
+    display: block;
+  }
+  .filterSun {
+    display: none;
+  }
+  .AllFifterSm {
+    display: flex;
+  }
+  .CourseCardSun {
+    width: 390px;
+    height: 177px;
+  }
+  .CourseCardImg {
+    margin-right: 5px;
+    & img {
+      width: 162px;
+      height: 172px;
+    }
+  }
+  .CourseCardTextSun {
+    margin-block: 13px;
+    width: 160px;
+    margin-right: 5px;
+    overflow: hidden;
+  }
+  .formControl {
+    width: 300px;
+  }
+  .brData {
+    display: block;
+  }
+  .hr {
+    border-color: #000000; /* 將顏色屬性改為 border-color */
+    width: 390px;
+    margin-bottom: 35px;
+  }
+  .main2Sun {
+    height: auto;
+    margin-top: 35px;
+  }
+  .CourseCardTextSun {
+    & p {
+      font-size: 12px !important;
+    }
+  }
+  .courseNameText {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 1; /* 指定顯示的行數 */
+    overflow: hidden;
+    font-size: 16px !important;
+  }
+  .description {
+    width: 160px;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 1; /* 指定顯示的行數 */
+    overflow: hidden; /* 隱藏溢出的文本 */
+  }
+
+  .description-content {
+    display: inline-block; /* 將內容設置為內聯塊級元素 */
+  }
+  .SearchSun {
+    width: 390px;
+    margin-bottom: 45px;
+  }
+  .CourseCardFavoriteAndPrice {
+    margin-block: 0px;
+    margin-bottom: 10px;
+  }
+}

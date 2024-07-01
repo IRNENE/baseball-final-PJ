@@ -1,0 +1,150 @@
+.r-nav p {
+  margin: 0;
+}
+
+.cart-r-title {
+  height: 44px;
+  align-items: center;
+  font-size: var(--p);
+  margin: 0;
+  padding: 0;
+  text-align: center;
+
+  border-bottom: var(--main) 1px solid;
+}
+
+@media (max-width: 576px) {
+  .cart-r-title {
+    display: none;
+  }
+}
+
+.cart-r-item {
+  margin: 0;
+  padding: 0;
+  height: 130px;
+  display: flex;
+  align-items: center;
+  font-size: var(--p);
+  border-bottom: var(--main) 1px solid;
+}
+
+@media (max-width: 576px) {
+  .cart-r-item {
+    height: 260px;
+    border-bottom: var(--main) 1px solid;
+  }
+}
+
+.r-info-content {
+  align-items: center;
+  display: grid;
+  grid-template-columns: repeat(6, 1fr); /* 创建4个等宽的列 */
+  gap: 60px; /* 可选：设置列之间的间隔 */
+}
+
+@media (max-width: 576px) {
+  .r-info-content {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr); /* 创建1个等宽的列 */
+    gap: 5px; /* 可选：设置列之间的间隔 */
+  }
+}
+
+/*  */
+@media (min-width: 577px) {
+  .r-info {
+    width: 300px;
+    padding-left: 20px;
+  }
+  .r-info-img {
+    width: 100px;
+  }
+  .r-price {
+    text-align: center;
+  }
+  .r-count {
+    text-align: center;
+  }
+  .r-sum {
+    text-align: center;
+  }
+}
+
+/* 商品照片 */
+.r-info-img {
+  justify-content: center;
+  align-items: center;
+}
+.r-img {
+  width: 80px;
+  height: 80px;
+  background: #000;
+  overflow: hidden;
+  line-height: 0;
+  margin: 0 auto;
+}
+.r-img img {
+  display: block;
+  width: 100%;
+  object-fit: cover;
+}
+/* 商品照片變更 */
+@media (max-width: 577px) {
+  .r-info-img {
+    width: 130px;
+    justify-content: start;
+    align-self: start;
+    margin-top: 35px;
+  }
+  /* 
+  .r-img {
+    width: 100px;
+    height: 180px;
+    background: #000;
+    overflow: hidden;
+    line-height: 0;
+    margin: 0 auto;
+  }
+  .r-img img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  } */
+}
+
+/* 商品內容 */
+.r-info p {
+  margin: 0;
+}
+.r-sum p {
+  margin: 0;
+}
+.r-price p {
+  margin: 0;
+}
+.r-count p {
+  margin: 0;
+}
+.r-category select {
+  width: 100px;
+  font-size: var(--p);
+}
+.r-category {
+  margin-top: 8px;
+}
+.r-category-item {
+  margin: 0;
+  margin-bottom: 8px;
+}
+@media (min-width: 577px) {
+  .r-category-item {
+    width: 140px;
+  }
+}
+@media (max-width: 570px) {
+  .r-date {
+    margin-top: 8px;
+  }
+}

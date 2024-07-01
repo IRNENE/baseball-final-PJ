@@ -1,0 +1,333 @@
+a {
+    color: var(--black);
+    text-decoration: none;
+}
+
+.course-Product-Img-Sun {
+    width: 720px;
+    height: 720px;
+
+    img {
+        width: 100%;
+        height: 100%;
+    }
+}
+
+.Course-Product-Img-Little-Card-Sun {
+    width: 720px;
+    height: 77px;
+    margin-top: 26px;
+
+    & .Course-Product-Img-Little-Sun {
+        width: 77px;
+        height: 77px;
+        margin-right: 24px;
+        cursor: pointer;
+
+        img {
+            width: 100%;
+            height: 100%;
+        }
+    }
+
+}
+
+.description-Sun {
+    margin-left: 40px;
+}
+
+.Product-text-Sun {
+    margin-bottom: 52px;
+}
+
+.Quantity-button-Sun {
+    margin-top: 21px;
+
+    h6 {
+        width: 89px;
+        height: 52px;
+        border: 1px solid #4E5052;
+        color: #EE3E27;
+    }
+
+    button {
+        background-color: #fff;
+        color: #000;
+        width: 52px;
+        height: 52px;
+        border: 1px solid #4E5052;
+    }
+}
+.container-nav{
+    padding: 5px;
+}
+.course-shopping-button-Sun {
+    margin-top: 52px;
+    color:#fff !important;
+    button {
+        width: 682px;
+        height: 50px;
+        margin-bottom: 25px;
+
+        img {
+            margin-right: 25px;
+            width: 20px;
+            height: 20px;
+        }
+
+        h6 {
+            color:#fff !important;
+            font-size: 16px;
+            font-weight: bold;
+
+        }
+    }
+}
+
+.course-Product-Main2-Sun {
+    max-width: 1440px;
+    margin-top: 115px;
+}
+.Course-Description-title{
+    width: 685px;
+    border-bottom:#91857F solid 2px ;
+    padding-block: 20px;
+    margin-top: 50px;
+    margin-bottom: 33px;
+    h5 {
+        margin-left: 15px;
+        margin-bottom: 0px;
+    }
+
+}
+.Course-Description {
+    width: 720px;
+    
+}
+.Course-Description-box{
+    max-width: 685px;
+}
+.Course-Comment-Sun{
+    max-width: 685px;
+    height: 152px;
+    padding-block: 20px;
+    padding-inline: 25px;
+    margin-bottom: 25px;
+    border: #625852 solid 1px;
+}
+.Course-Comment-User-Sun{
+    img{
+        width: 54px;
+        height: 52px;
+        margin-right: 20px;
+    }
+}
+.Course-Comment-User-Name-Sun{
+    height: 50px;
+}
+.star-icon{
+    img{
+        width: 16px;
+        height: 16px;
+        margin-right: 4px;
+    }
+}
+.Course-Comment-Text-Sun{
+    margin-top: 20px;
+}
+.very-Comment{
+    color: #EE3E27;
+    p{
+        margin-bottom:0px ;
+        font-weight: bold;
+    }
+    img{
+        margin-left: 5px;
+    }
+}
+.course-teacher-sun{
+    width: 720px;
+}
+.teacher-box-sun{
+    max-width:685px;
+}
+.course-teacher-text-sun{
+    margin-top: 20px;
+    margin-left: 23px;
+    width: 357px;
+    h5{
+        line-height:50px; 
+    }
+}
+.course-recommended-img-sun{
+    width: 170px;
+    height: 181px;
+    margin-left: 10px;
+    img{
+        width: 100%;
+        height: 100%;
+    }
+    h6{
+        margin-top: 10px;
+    }
+    .recommended-price{
+        font-weight: bold;
+        color: #EE3E27;
+    }
+}
+.recommended-price-card{
+    h6{
+        margin-left: 5px;
+        margin-top: 2px;
+        text-decoration: line-through;
+    }
+}
+.custom-link-color-Sun{
+    color: #000 !important;
+}
+.course-teacher-img-sun{
+    width: 685px;
+
+    img{
+       /* margin:auto; */
+       width: 336px;
+       height:100%;
+    }
+}
+@media (max-width:576px){
+    .breadcrumb-sun{
+        margin-top: 88px;
+    }
+    .course-Product-Img-Sun {
+        width: 390px;
+        height: 332px;
+    
+        img {
+            width: 100%;
+            height: 100%;
+        }
+    }
+    .Course-Product-Img-Little-Card-Sun {
+        width: 390px;
+        height: 60px;
+        margin-top: 26px;
+    
+        & .Course-Product-Img-Little-Sun {
+            width: 60px;
+            height: 60px;
+            margin-right: 22px;
+    
+            img {
+                width: 100%;
+                height: 100%;
+            }
+        }
+    
+    }
+    .description-Sun {
+        margin-top: 26px;
+        margin-left: 0px;
+    }
+    .course-shopping-button-Sun {
+        margin-top: 52px;
+        color:#fff !important;
+        button {
+            width: 180px;
+            height: 50px;
+            margin-bottom: 25px;
+    
+            img {
+                margin-right: 25px;
+                width: 20px;
+                height: 20px;
+            }
+    
+            h6 {
+                color:#fff !important;
+                font-size: 16px;
+                font-weight: bold;
+    
+            }
+        }
+    }
+    .course-shopping-button-Sun button:first-child{
+     margin-right: 27px;   
+    }
+    .course-Product-Main2-Sun {
+        max-width: 1440px;
+        margin-top: 0px;
+    }
+    .Course-Description-title{
+        width: 390px;
+        border-bottom:#91857F solid 2px ;
+        padding-block: 20px;
+        margin-top: 13px;
+        margin-bottom: 33px;
+        h5 {
+            margin-left: 15px;
+            margin-bottom: 0px;
+        }
+    
+    }
+    .Course-Description-box{
+        width: 390px;
+    }
+    .Course-Comment-Sun{
+        width: 390px;
+        height: auto;
+        padding-block: 20px;
+        padding-inline: 25px;
+        margin-bottom: 25px;
+        border: #625852 solid 1px;
+    }
+    .teacher-box-sun{
+        width:390px;
+    }
+    .modal-body-Sun{
+        padding: 0px !important;
+    }
+    .course-teacher-img-sun{
+         width: 336px;
+         height: auto;
+         margin: auto;
+         img{
+            /* margin:auto; */
+            width: 100%;
+            height:100%;
+         }
+    }
+    .recommended-box-Sun{
+        width: 390px;
+}
+.course-recommended-Sun{
+    margin-bottom: 100px;
+}
+.course-reomended-card{
+    width: 390px;
+    
+}
+.Course-Description {
+    width: 430px;
+    
+}
+.course-teacher-sun{
+    width: 430px;
+}
+.swal2-container{
+    z-index: 99999;
+}
+.course-recommended-card{
+    width: 390px;
+    overflow: hidden;
+   
+}
+.course-recommended-img-sun{
+    width: 185px;
+    img{
+        width: 100%;
+    }
+}
+.container-nav{
+    /* margin-top:190px; */
+}
+}

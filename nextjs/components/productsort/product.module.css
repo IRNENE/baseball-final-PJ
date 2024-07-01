@@ -1,0 +1,910 @@
+/*  商品列表  */
+/* .container {
+    width: 1440px !important;
+} */
+
+.navberImgSun {
+    width: 100%;
+    height: 628px;
+    margin-bottom: 85px;
+    & img{
+        width: 100%;
+        height: 100%;
+        background-image: url('../../public/images/product/full1.jpg');
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+    }    
+ }
+ .tete{
+    text-decoration: none;
+}
+
+
+.text {
+    padding-top: 20px;
+    padding-left: 10px;
+    display: flex;
+
+}
+
+.picture {
+    color: aliceblue;
+    margin: 0;
+    padding: 0;
+    background-image: url('../../public/images/product/full1.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 628px;
+
+}
+
+.div {
+    display: flex;
+    max-width: 197px;
+    flex-direction: column;
+    font-size: 14px;
+    color: #4e5052;
+    font-weight: 400;
+    white-space: nowrap;
+    line-height: 157%;
+}
+
+.div2 {
+    width: 100%;
+    font: 700 16px/137.5% Inter, sans-serif;
+    margin-top: 95px;
+}
+
+.div3 {
+    margin: 10px 0px;
+}
+
+.div33 {
+    border-color: #bbc0c4;
+    border-style: solid;
+    border-width: 1px;
+    background-color: #bbc0c4;
+    min-height: 1px;
+    margin-top: 18px;
+    width: 180px;
+}
+
+
+.left {
+    float: left;
+    width: 200px;
+    height: 2000px;
+}
+
+.right {
+    margin-left: 220px;
+    height: 2000px;
+}
+
+.box1 {
+    display: flex;
+    justify-content: space-between;
+}
+
+
+
+.box3 {
+    background: #fff;
+    width: 262px;
+    height: 370px;
+    padding: 0px;
+    /* margin: 5px; */
+    border: 0px solid red;
+    float: left;
+    /* transition: .5s; */
+}
+
+.avatar {
+    width: 260px;
+    height: 260px;
+    background: #000;
+    overflow: hidden;
+    margin: 0 auto;
+    border: 0px solid blue;
+    & img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    }
+}
+
+
+
+.name {
+    margin-top: 8px;
+    padding-bottom: 10px;
+    font-size: 18px;
+    /* line-height: 30px; */
+    font-weight: bolder;
+    width: 260px;
+    height: 30px;
+}
+
+.box4 {
+    color: #EE3E27;
+    font-weight: bold;
+    width: 260px;
+    /* height: 20px; */
+    font-size: 16px;
+    line-height: 18px;
+    border: 0px solid blue;
+    margin-top: 24px;
+}
+
+.box5 {
+
+    width: 240px;
+    /* height: 20px; */
+    font-size: 12px;
+    /* line-height: 18px; */
+    border: 0px solid blue;
+    text-decoration: line-through;
+
+
+
+
+}
+
+
+.clear {
+    clear: both;
+
+}
+
+.bbox {
+    display: flex;
+    justify-content: space-between;
+}
+
+.page1 {
+    display: flex;
+    justify-content: center;
+}
+.prodd1{
+    display: inline-block;
+}
+.prodd2{
+    display: inline-block; 
+}
+
+.xxx{
+    display: flex;
+    align-items: center;
+   
+}
+.ppp1{
+    width: 100px;
+}
+.ppx{
+    width: 100px;
+}
+.iconContainer{
+    text-align: right;
+}
+.msAutoReset {
+    margin-left: auto; /* 提供默认值 */
+}
+
+@media screen and (max-width: 430px) {
+    .navberImgSun{
+        display: none;
+    }
+    .div{
+        display: none;
+    }
+    .box1{
+        display: none;
+    }
+    .page1{
+        display: none;
+    }
+    .breadcrumb1{
+        display: none;
+    }
+    .ppx {
+        display: none;
+    }
+    .ppp1{
+        /* display:flex;
+        align-items: flex-start; */
+        /* justify-content: flex-start; */
+        text-align: left;
+    }
+   
+    .msAutoReset {
+        margin-left: 20px; /* 在小屏幕上这会去掉“向右自动推送”的效果 */
+    }
+    .box3{
+        width:170px;
+        height:260px;
+       
+    }
+    .singleEllipsis1 {
+        width: 170px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+    }
+    .avatar {
+        width: 170px;
+        height: 170px;
+        background: #000;
+        overflow: hidden;
+        margin: 0 auto;
+        border: 0px solid blue;
+        & img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+        }
+    }
+    .box4{
+        width: 170px;
+        margin-top:2px;
+    }
+    .boxbox3{
+        background-color: rgb(198, 198, 198);
+        border:0px solid #91857F;
+        width:390px;
+        height:75px;
+        margin:-80px auto 0 auto;
+        display:flex;
+
+    }
+    .child{
+        flex:1;
+        
+    }
+    .light{
+        
+        border-right:1px solid black;
+    }
+
+    .child1{
+        
+        text-decoration: none;
+        margin-top:6px;
+        margin-left:9px;
+        
+    }
+    .child2{
+        color:#EE3E27;
+        margin-top:6px;
+        margin-left:9px;
+    }
+    .noUnderline {
+        color:rgb(74, 74, 74);
+        text-decoration: none;
+      }
+
+
+    
+
+}
+@media screen and (min-width: 431px) {
+    .boxbox3{
+        display:none;
+    }
+}
+/* _______________________________________________________________________ */
+/* 商品詳細 */
+
+.tete{
+    text-decoration: none;
+}
+.left1 {
+    /* float: left;
+    width: 50%;
+    height: 2000px; */
+    border: 0px solid red;
+}
+
+.right1 {
+    /* float: right;
+    height: 2000px; */
+    border: 0px solid blue;
+
+
+}
+
+.avatar1 {
+    width: 600px;
+    height: 600px;
+    background: #F6F6F6;
+    overflow: hidden;
+    /* margin: 0 auto; */
+    border: 0px solid blue;
+    
+}
+.avatar1{
+    & img{
+    max-width: 100%;
+    min-height: 100%;
+    object-fit: cover;
+    object-position: center;
+    }
+}
+
+/* .avatar1 img {
+    max-width: 100%;
+    min-height: 100%;
+    object-fit: cover;
+    object-position: center;
+    
+} */
+
+.avatar2 {
+    width: 80px;
+    height: 80px;
+    background: #fffffff3;
+    overflow: hidden;
+    /* margin: 0 auto; */
+    border: 1px solid #91857F;
+}
+.avatar2{
+    & img{
+    max-width: 100%;
+    min-height: 100%;
+    object-fit: cover;
+    object-position: center;
+    }
+}
+
+
+/* .avatar2 img {
+    max-width: 100%;
+    min-height: 100%;
+    object-fit: cover;
+    object-position: center;
+} */
+
+.pic {
+    display: inline-block;
+    margin: 15px 10px;
+}
+
+@media screen and (max-width: 430px) {
+    .breadcrumb{
+        width: 400px;
+        margin-left: 10px;
+    }
+    .left1{
+        width: 410px;
+        margin:8px;
+        border: 0px solid red;
+    }
+    .right1{
+        width: 410px;
+        border: 0px solid blue;
+        margin:8px;
+    }
+
+    .bigpic {
+        
+        width: 390px;
+        height: 390px;
+    }
+    .avatar1{
+        width: 390px;
+        height: 390px;
+        /* margin:8px */
+    }
+    /* .avatar1 img {
+
+    } */
+    .avatar2{
+        width: 81px;
+        height: 81px;
+
+    }
+    .ppic2{
+        width: 390px;
+        height: 250px;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        
+    }
+    .pic{
+        
+        margin: 15px 8px 15px 8px;
+    }
+    .colorr{
+        display:none;
+    }
+    
+
+}
+
+.page-link {
+    margin: 15px;
+}
+
+.brand {
+    color: #EE3E27;
+    border: 1px solid #EE3E27;
+    display: inline-block; /* 讓元素以內聯塊（inline-block）方式顯示，這樣寬度會隨著內容自動調整 */
+    padding: 3px 5px;
+    /* width: 94px; */
+}
+.miz {
+    color: #EE3E27;
+    border: 1px solid #EE3E27;
+    padding: 3px 5px;
+    width: 100px;
+}
+
+.divv {
+    align-self: stretch;
+    display: flex;
+    max-width: 680px;
+    flex-direction: column;
+    font-size: 16px;
+    white-space: nowrap;
+    margin-left: -2px;
+}
+
+
+.div3333 {
+    justify-content: center;
+    display: flex;
+    margin-top: 21px;
+    width: 193px;
+    max-width: 100%;
+    gap: 0px;
+    color: #000;
+    font-weight: 600;
+    padding: 0 20px;
+}
+
+.div4 {
+    justify-content: center;
+    align-items: flex-start;
+    border-color: rgba(78, 80, 82, 1);
+    background-color: white;
+
+
+    border-style: solid;
+    border-width: 1px;
+    padding: 10px 20px;
+    font: 19px Inter, sans-serif;
+}
+
+.div5 {
+    font-family: Inter, sans-serif;
+    justify-content: center;
+    align-items: flex-start;
+    border-color: rgba(78, 80, 82, 1);
+    border-bottom: 1px solid;
+    border-top: 1px solid;
+    /* border-style: solid;
+    border-top-width: 1px; */
+    border-bottom-width: 1px;
+    color: var(--, #EE3E27);
+    font-weight: 700;
+    line-height: 137.5%;
+    padding: 10px 35px;
+}
+
+.div6 {
+    font-family: Inter, sans-serif;
+    justify-content: center;
+    border-color: rgba(78, 80, 82, 1);
+    border-style: solid;
+    border-width: 1px;
+    padding: 10px 20px;
+    background-color: white;
+}
+
+.aa {
+    background-color: #91857F;
+    padding: 5px;
+    color: #fff;
+    margin-right: 2px;
+    white-space: nowrap;
+   
+}
+.asa{
+    background-color: #91857F;
+    padding: 5px;
+    color: #fff;
+    margin-right: 2px;
+    white-space: nowrap;
+    max-height:31px;
+}
+
+.table1 {
+    border-collapse: collapse;
+    /* 合併表格邊框 */
+    width: 100%; 
+     /* 表格寬度為100% */
+}
+
+.th1{
+    border-bottom: 1px solid #000;
+    /* 添加底線 */
+    padding: 8px;
+    /* 添加內邊距 */
+    text-align: left;
+    /* 文字左對齊 */
+}
+.td1{ 
+    border-bottom: 1px solid #000;
+    /* 添加底線 */
+    padding: 8px;
+    /* 添加內邊距 */
+    text-align: left;
+    /* 文字左對齊 */
+} 
+
+.box7 {
+    background: #fff;
+    width: 150px;
+    height: 240px;
+    padding: 0px;
+    margin-inline: 12px;
+    border: 0px solid red;
+    float: left;
+    /* transition: .5s; */
+}
+
+.avatar3 {
+    width: 150px;
+    height: 150px;
+    background: #000;
+    overflow: hidden;
+    margin: 0 auto;
+    border: 0px solid blue;
+}
+
+.avatar3{
+    & img{
+    max-width: 100%;
+    min-height: 100%;
+    object-fit: cover;
+    object-position: center;
+    }
+}
+
+
+/* .avatar3 img {
+
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+} */
+
+.singleEllipsis {
+    width: 150px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.bbb {
+    display: inline-block;
+}
+
+.box8 {
+    display: inline-block;
+    color: #EE3E27;
+    /* margin-right: 5px; */
+}
+
+.box9 {
+    display: inline-block;
+    text-decoration: line-through;
+}
+
+.ccc {
+    margin-top: 78px;
+    background-color: #F6F6F6;
+    height: 60px;
+    border-bottom: 1px solid #91857F;
+}
+
+.peo {
+    background-color: #4e5052;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    margin-right: 10px;
+
+
+}
+
+.nam {
+
+    display: inline-block;
+
+}
+
+.qqq {
+
+    display: flex;
+}
+
+.card {
+    margin-bottom: 10px;
+    background-color: #FDFBFB;
+}
+
+.cardText {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.ppp {
+    margin-top: 97px;
+}
+
+.pric1 {
+
+    display: inline-block;
+
+}
+
+.pric2 {
+    margin-left: 5px;
+    text-decoration: line-through;
+    display: inline-block;
+
+}
+
+.bigpic {
+    margin-right: 80px;
+}
+/* .sss{
+    padding: 0px;
+} */
+.customHr{
+    border-color:#91857F;
+}
+.qq1{
+    color:#EE3E27
+}
+@media screen and (max-width: 430px) {
+    .ppp {
+        margin-top: 50px;
+    }
+    .box7 {
+        background: #fff;
+        width: 150px;
+        height: 240px;
+        padding: 0px;
+        /* margin-inline: 12px; */
+        border: 0px solid red;
+        /* float: left; */
+        /* transition: .5s; */
+    }
+    .allp{
+        display: flex;
+        flex-wrap: nowrap;
+        
+        max-width: 410px;
+        overflow: hidden;
+        /* margin-inline: 3px; */
+        
+    }
+    .ccc {
+        margin-top: 50px;
+    }
+}
+
+
+/* productselection手機品牌 顏色 金額篩選----------------------------------------------- */
+
+.ch{
+    width: 430px;
+    height: 610px;
+    border: 0px solid red;
+}
+.titlee{
+    width: 400px;
+    display: flex;
+    justify-content: center;
+    margin-inline: auto;
+    border: 0px solid red;
+    margin-top: 7px;
+    position: relative;
+}
+
+.brandb{
+    width: 360px;
+    height: 145px;
+    margin-inline: auto;
+
+}
+.price{
+    width: 360px;
+    height: 120px;
+    margin-inline: auto;
+    
+}
+.color{
+    width: 360px;
+    height: 100px;
+    margin-inline: auto;
+   
+}
+.hh{
+    width: 360px;
+    margin-inline: auto;
+}
+.brandOptions {
+    display: flex;
+    margin-block: 2px;
+    
+}
+
+.brandOption {
+    flex-grow: 1; /* 將每個品牌選項的寬度均分 */
+     /* 如果需要，使文本居中 */
+     width: 120px;
+     white-space: nowrap;
+}
+.brr{
+    margin-right: 5px;
+}
+.btn1{
+    width: 100px;
+    background-color: #4E5052;
+}
+.btn2{
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+
+/* productclass手機select類別------------------------------------------------------------- */
+.ch1{
+    width: 430px;
+    height: 480px;
+    border: 0px solid red;
+}
+/* .ch1{
+    & select:focus{
+
+    }
+} */
+.btn3{
+    width: 160px;
+    margin-inline:auto ;
+    background-color: #4E5052;
+    
+}
+.rrr{
+    width: 430px;
+}
+
+/* productsort手機排序----------------------------------------------------------------------------------- */
+
+.ch3{
+    width: 230px;
+    height: 200px;
+    border: 0px solid red;
+}
+.titlee1{
+    width: 220px;
+    display: flex;
+    justify-content: center;
+    margin-inline: auto;
+    border: 0px solid red;
+    margin-top: 7px;
+    position: relative;
+}
+.btn4{
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+.order{
+    width: 130px;
+    /* height: 127px; */
+    margin-inline: auto;
+    border:0px solid blue;
+    margin-block: 7px;
+}
+.ooder1{
+    margin-right: 6px;
+    border:0px solid blue;
+}
+
+/* productsearch手機搜尋------------------------------------------------------------------ */
+.ch4{
+    width: 430px;
+    height: 932px;
+    border: 0px solid red;
+}
+.ch5{
+    width: 311px;
+    height: 254px;
+    border: 0px solid red;
+    margin-inline: auto;
+    margin-top:40px;
+}
+
+.ssear{
+    background-color: #f0f0f0;
+    border-radius: 20px;
+    padding: 3px;
+    display: flex;
+    align-items: center;
+    width: 250px;
+    
+}
+
+.searOptions {
+    display: flex;
+    margin-block: 9px;
+    
+}
+
+.searOption {
+    flex-grow: 1; /* 將每個品牌選項的寬度均分 */
+     /* 如果需要，使文本居中 */
+    height: 30px;
+    width:  69px;
+
+     /* white-space: nowrap; */
+    
+     background-color: #f0f0f0; /* 設定背景顏色 */
+    border-radius: 20px; /* 設定藥丸形狀的邊框半徑 */
+    padding: 5px 5px ; /* 適當的內邊距 */
+    margin: 5px 5px 5px 5px; /* 適當的外邊距 */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.seee {
+    text-align: center; /* 文字置中對齊 */
+    height: 10px;
+    width:  69px;
+    padding-top:3px;
+    
+}
+
+.inin{
+    padding: 8px;
+    border: none; /* 移除邊框線 */
+    outline: none;
+    background-color: #f0f0f0;
+    border-radius: 20px;
+}
+.bubu{
+    padding: 8px 8px 8px 8px;
+    border: none; /* 移除邊框線 */
+    outline: none;
+    
+    margin-left: auto;
+    background-color: white;
+    
+}
+.iii{
+    margin-left: 6px;
+    background-color: #f0f0f0;
+    border-radius: 20px;
+    
+}
+
+.hhh{
+    margin-top: 15px;
+    color:#848585;
+}
+.www{
+    text-decoration: none;
+    color:#4E5052;
+}

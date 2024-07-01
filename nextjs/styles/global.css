@@ -1,0 +1,88 @@
+:root {
+  --black: #000;
+  --main: #ee3e27;
+  --active: #d4321c;
+  --text: #4e5052;
+  --gray: #111;
+  --gray-light: #f6f6f6;
+  --brown: #625852;
+  --h1: 40px;
+  --h2: 32px;
+  --h3: 27px;
+  --h4: 24px;
+  --h5: 19px;
+  --h6: 16px;
+  --p: 14px;
+}
+body {
+  max-width: 1920px;
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-weight: bold;
+    margin: 0;
+  }
+
+  h1 {
+    font-size: 40px;
+  }
+
+  h2 {
+    font-size: 32px;
+  }
+
+  h3 {
+    font-size: 27px;
+  }
+
+  h4 {
+    font-size: 24px;
+  }
+
+  h5 {
+    font-size: 19px;
+  }
+
+  h6 {
+    font-size: 16px;
+  }
+
+  p {
+    font-size: 14px;
+  }
+  input[type='checkbox'],
+  input[type='radio'] {
+    accent-color: var(--main);
+  }
+  a {
+    text-decoration: none;
+  }
+}
+.layoutAll {
+  min-height: 100vh;
+}
+.layoutWrap {
+  padding-bottom: 320px;
+}
+
+@media screen and (max-width: 576px) {
+  .layoutWrap {
+    /* padding-top: 90px; */
+    padding-bottom: 190px;
+  }
+}
+
+/* 客服系統用 */
+#ce-send-message-button {
+  background: var(--main) !important;
+}
+.ce-my-message-bubble {
+  background: var(--main) !important;
+}
+#new-chat-plus-button {
+  background: var(--main) !important;
+}

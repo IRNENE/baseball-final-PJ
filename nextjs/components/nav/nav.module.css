@@ -1,0 +1,245 @@
+.header {
+  padding-block: 20px;
+  color: var(--gray-light);
+  z-index: 1000;
+  & .container {
+    width: 100%;
+
+    & .logo-box {
+      width: 34px;
+      height: 34px;
+
+      & .img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+  }
+}
+/* 首頁、專欄等的ul */
+.mainUl {
+  font-size: var(--h6);
+  font-weight: bold;
+  margin: 0 0 0 150px;
+}
+.mainUl li {
+  width: 100px;
+  padding-inline: 10px;
+  padding-block: 10px;
+}
+/* 會員購物車的ul */
+.members {
+  font-size: var(--h6);
+  font-weight: bold;
+  margin: 0 0 0 70px;
+}
+.members li {
+  width: 50px;
+  padding-inline: 10px;
+  padding-block: 10px;
+}
+
+.header ul li:hover {
+  background-color: var(--main);
+}
+.active {
+  background-color: var(--main);
+}
+
+.searchYes {
+  background: #444;
+  width: 1000px;
+  height: 49px;
+  right: 420px;
+  top: 20px;
+  z-index: 1000;
+  & select {
+    width: 100px;
+    background: #444;
+    border: none;
+    border-radius: 0;
+    height: 100%;
+    padding-right: 12px;
+    &:focus {
+      background: #555;
+      box-shadow: none;
+    }
+    &:disabled {
+      background: #444;
+    }
+  }
+  & input {
+    background: #444;
+    border: none;
+    border-radius: 0;
+    height: 100%;
+    &:focus {
+      background: #555;
+      box-shadow: none;
+    }
+    &::placeholder {
+      color: var(--gray-light);
+    }
+  }
+  & button {
+    border: none;
+    background: #666;
+    height: 100%;
+    right: 0px;
+    padding-inline: 15px;
+    &:hover {
+      background: #666;
+    }
+  }
+}
+
+.alert {
+  position: absolute;
+  top: 80px;
+  left: 600px;
+  z-index: 1000;
+  padding: 9px 10px 5px;
+  clip-path: polygon(
+    0 5px,
+    46% 5px,
+    50% 0,
+    54% 5px,
+    100% 5px,
+    100% 100%,
+    0 100%
+  );
+}
+
+.accountNo {
+  background: #444;
+  width: 115px;
+  left: -32px;
+  top: 48px;
+  z-index: 1000;
+
+  & li {
+    width: 115px;
+    padding: 10px;
+  }
+}
+
+.accountYes {
+  background: #444;
+  width: 150px;
+  left: -50px;
+  top: 49px;
+  z-index: 1000;
+
+  & li {
+    width: 150px;
+    padding: 10px;
+    cursor: pointer;
+  }
+}
+.circle {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background: #eee;
+  overflow: hidden;
+
+  & img {
+    max-width: 100%;
+    object-fit: cover;
+  }
+}
+
+/* 購物車數字 */
+.cart-num {
+  top: -5px;
+  right: -10px;
+  border-radius: 50%;
+  width: 22px;
+  height: 22px;
+  font-size: 10px;
+}
+
+/* submenu */
+.main {
+  position: relative;
+  z-index: 999;
+}
+.main ul {
+  position: absolute;
+  left: 0px;
+  top: 44px;
+  background: #444;
+}
+.main ul li:hover {
+  background-color: var(--main);
+}
+
+/* 手機板彈窗初始位置 */
+.navM {
+  position: fixed;
+  top: 0;
+  left: -100%;
+  /* width: 100%; */
+  height: 100%;
+  /* background-color: #eeeeee67; */
+  z-index: 999;
+  display: none;
+}
+
+.slideIn {
+  left: 0;
+  transition: left 0.5s ease;
+}
+.slideOut {
+  left: -100%;
+  transition: left 0.5s ease;
+}
+
+@media screen and (max-width: 576px) {
+  .header {
+    transition: 0.4s;
+    /* max-width: 430px; */
+  }
+  .header ul {
+    margin: 0;
+  }
+  .header ul li {
+    padding-inline: 5px;
+  }
+  .header {
+    position: fixed;
+    top: 0;
+  }
+  .members li {
+    width: 37px;
+  }
+  .accountNo li {
+    width: 115px;
+  }
+  .accountYes li {
+    width: 115px;
+  }
+  .searchYes {
+    background: #444;
+    width: 220px;
+    height: 49px;
+    right: 150px;
+    top: 20px;
+    & select {
+      width: 80px;
+    }
+    & button {
+      padding-inline: 8px;
+    }
+  }
+  .alert {
+    left: 100px;
+  }
+  .cart-num {
+    right: -5px;
+  }
+  .navM {
+    display: block;
+  }
+}
