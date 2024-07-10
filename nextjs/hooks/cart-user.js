@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react'
 import { useAuth } from '@/hooks/use-auth'
+import { debounce } from 'lodash'
 // 初始化購物車狀態
 const initialCartState = {
   items: [],
@@ -12,7 +13,7 @@ const cartUser = () => {
   const userId = auth.userData?.id
 
   // 從後端獲取購物車狀態
-  const fetchCart = async () => {
+  const fetchCart = debounce(async () => {
     if (!userId) return
     try {
       const response = await fetch(
@@ -34,7 +35,7 @@ const cartUser = () => {
     } catch (error) {
       console.error('Error fetching cart:', error)
     }
-  }
+  }, 300)
 
   // 當 userId 改變時，重新獲取購物車狀態
   useEffect(() => {
@@ -45,7 +46,7 @@ const cartUser = () => {
   // 当 cart 状态变化时，重新获取购物车状态
   useEffect(() => {
     fetchCart()
-    console.log('Current cart state:', cart.totalAmount)
+    // console.log('Current cart state:', cart.totalAmount)
   }, [cart.items]) // 监听购物车商品变化
   // 监听 cart 状态变化并打印
   // useEffect(() => {
