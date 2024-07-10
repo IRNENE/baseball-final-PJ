@@ -29,21 +29,5 @@ router.get('/:userId', async (req, res) => {
     res.status(500).send('Error querying database')
   }
 })
-// router.post('/:userId/add', async (req, res) => {
-//   const { userId, productId, newQuantity } = req.body
-
-//   try {
-//     let sql = ` UPDATE cart SET p_amount = ? WHERE user_id = ? AND product_id = ?`
-//     const [result] = await db.query(sql, [newQuantity, userId, productId])
-//     if (result.affectedRows > 0) {
-//       res.status(200).send('Product quantity updated successfully')
-//     } else {
-//       res.status(404).send('Product not found in cart')
-//     }
-//   } catch (error) {
-//     console.error('Database error:', error)
-//     res.status(500).send('Failed to update product quantity in cart')
-//   }
-// })
 
 export default router

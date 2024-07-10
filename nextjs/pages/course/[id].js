@@ -7,9 +7,9 @@ import favorite from '@/public/images/course/Rectangle false.svg'
 import favoriteLove from '@/public/images/course/Rectangle true.svg'
 import Image from 'next/image'
 import axios from 'axios'
-import { IoMdStar, IoMdStarOutline } from "react-icons/io"; //實心星星 空心星星 wun
-import { MdArrowRight } from "react-icons/md";  // wun
-
+import { IoMdStar, IoMdStarOutline } from 'react-icons/io' //實心星星 空心星星 wun
+import { MdArrowRight } from 'react-icons/md' // wun
+import cartUser from '@/hooks/cart-user'
 
 export default function CourseDetail() {
   const router = useRouter()
@@ -27,7 +27,7 @@ export default function CourseDetail() {
   const [recommendedCourses, setRecommendedCourses] = useState([])
   const [selectedPhoto, setSelectedPhoto] = useState(null)
   const [clickedIndex, setClickedIndex] = useState(0)
-
+  const { fetchCart } = cartUser()
   // 獲取此商品評論資料 wun
   const [comment, setComment] = useState([])
 
@@ -36,31 +36,30 @@ export default function CourseDetail() {
     //  使用 fetch 函數向後端發送 HTTP GET 請求
     const courseId = id
     fetch(`http://localhost:3005/api/comment/course/${courseId}`)
-      .then(response => {
+      .then((response) => {
         // 檢查 HTTP 響應是否成功
         if (!response.ok) {
-          throw new Error('無法獲取評論數據');
+          throw new Error('無法獲取評論數據')
         }
         // 將 JSON 響應解析為 JavaScript 物件
-        return response.json();
+        return response.json()
       })
-      .then(data => {
+      .then((data) => {
         // 在這裡處理從後端獲取到的評論數據
-        console.log('評論資料:', data);
+        console.log('評論資料:', data)
         // 你可以根據需要將數據顯示在網頁上的特定位置
-        setComment(data);
+        setComment(data)
       })
-      .catch(error => {
+      .catch((error) => {
         // 如果發生錯誤，輸出錯誤訊息到控制台
-        console.error('發生錯誤:', error);
-      });
+        console.error('發生錯誤:', error)
+      })
   }
 
   useEffect(() => {
-    fetchComment();
+    fetchComment()
   }, [id])
   // 評論的fetch結束   wun
-
 
   // 使用 id 获取课程详细信息
   useEffect(() => {
@@ -109,7 +108,7 @@ export default function CourseDetail() {
         .then((data) => {
           setRecommendedCourses(data)
         })
-        .catch((error) => { })
+        .catch((error) => {})
     }
   }, [courseDetail])
 
@@ -194,9 +193,10 @@ export default function CourseDetail() {
             text: data.error || '請稍後再試',
           })
         }
-        setTimeout(() => {
-          window.location.reload()
-        }, 1000)
+        // setTimeout(() => {
+        //   window.location.reload()
+        // }, 1000)
+        fetchCart()
       })
       .catch((err) => {
         Swal.fire({
@@ -215,7 +215,7 @@ export default function CourseDetail() {
       )
       const favoriteProducts = response.data.map((item) => item.product_id)
       setFavoriteProductIds(favoriteProducts)
-    } catch (error) { }
+    } catch (error) {}
   }
 
   if (userData.id !== previousUserId) {
@@ -280,7 +280,7 @@ export default function CourseDetail() {
 
   return (
     <div className="container container-nav">
-      <nav className='breadcrumb-sun' aria-label="breadcrumb">
+      <nav className="breadcrumb-sun" aria-label="breadcrumb">
         <ol className="breadcrumb">
           <li className="breadcrumb-item">
             <a href="http://localhost:3000/course">所有課程</a>
@@ -296,8 +296,9 @@ export default function CourseDetail() {
           <div className="course-Product-Img-Sun">
             <img
               alt=""
-              src={`/images/course/${selectedPhoto !== null ? selectedPhoto : photoArray[0]
-                }`}
+              src={`/images/course/${
+                selectedPhoto !== null ? selectedPhoto : photoArray[0]
+              }`}
             />
           </div>
           <div className="Course-Product-Img-Little-Card-Sun d-flex">
@@ -411,22 +412,31 @@ export default function CourseDetail() {
           {comment.length === 0 ? (
             <h3 className="text-center my-4">暫時無相關評論</h3>
           ) : (
-            comment.slice(0, 2).map(comment => (
+            comment.slice(0, 2).map((comment) => (
               <div key={comment.id} className="Course-Comment-Sun">
                 <div className="d-flex justify-content-between">
                   <div className="d-flex Course-Comment-User-Sun">
-                    <img alt="" src={comment.photo &&
-                                                            comment.photo.includes('http')
-                                                            ? `${comment.photo}`
-                                                            : `http://localhost:3005/uploads/${comment.photo}`} />
+                    <img
+                      alt=""
+                      src={
+                        comment.photo && comment.photo.includes('http')
+                          ? `${comment.photo}`
+                          : `http://localhost:3005/uploads/${comment.photo}`
+                      }
+                    />
                     <div className="Course-Comment-User-Name-Sun">
-                      <h6>{comment.account === null
-                                                        ? comment.email.substring(0, 3) + '***'
-                                                        : comment.account.substring(0, 3) + '***'}</h6>
+                      <h6>
+                        {comment.account === null
+                          ? comment.email.substring(0, 3) + '***'
+                          : comment.account.substring(0, 3) + '***'}
+                      </h6>
                       <p>{comment.created_at}</p>
                     </div>
                   </div>
-                  <div className="ms-auto  " style={{ fontSize: '1.5rem', color: 'red' }}>
+                  <div
+                    className="ms-auto  "
+                    style={{ fontSize: '1.5rem', color: 'red' }}
+                  >
                     {[...Array(comment.star)].map((_, index) => (
                       <IoMdStar key={index} />
                     ))}
@@ -439,14 +449,21 @@ export default function CourseDetail() {
                   <p>{comment.description}</p>
                 </div>
               </div>
-            )
-            ))}
+            ))
+          )}
           {comment.length === 0 ? (
             <div></div>
           ) : (
             <div className="ms-auto text-end">
-              <button className="btn text-danger d-flex align-items-center ms-auto mb-2" type="button"
-                data-bs-toggle="modal" data-bs-target="#ModalComment"> 查看更多評論 <MdArrowRight /> </button>
+              <button
+                className="btn text-danger d-flex align-items-center ms-auto mb-2"
+                type="button"
+                data-bs-toggle="modal"
+                data-bs-target="#ModalComment"
+              >
+                {' '}
+                查看更多評論 <MdArrowRight />{' '}
+              </button>
             </div>
           )}
         </div>
@@ -478,30 +495,52 @@ export default function CourseDetail() {
             </div>
           </div>
           {/* 評論  modal 彈窗 */}
-          <div className="modal fade" id="ModalComment" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+          <div
+            className="modal fade"
+            id="ModalComment"
+            tabindex="-1"
+            aria-labelledby="exampleModalLabel"
+            aria-hidden="true"
+          >
             <div class={`modal-dialog modal-lg text-info`}>
               <div class="modal-content px-3 pt-3">
                 <div class="modal-header">
-                  <h5 class="modal-title fs-5" id="exampleModalLabel">所有評論</h5>
-                  <button type="button" class="btn-close ms-auto" data-bs-dismiss="modal" aria-label="Close"></button>
+                  <h5 class="modal-title fs-5" id="exampleModalLabel">
+                    所有評論
+                  </h5>
+                  <button
+                    type="button"
+                    class="btn-close ms-auto"
+                    data-bs-dismiss="modal"
+                    aria-label="Close"
+                  ></button>
                 </div>
                 <div class="modal-body text-start px-4 modal-body-Sun">
-                  {comment.map(comment => (
+                  {comment.map((comment) => (
                     <div key={comment.id} className="Course-Comment-Sun">
                       <div className="d-flex justify-content-between">
                         <div className="d-flex Course-Comment-User-Sun">
-                          <img alt="" src={comment.photo &&
-                                                            comment.photo.includes('http')
-                                                            ? `${comment.photo}`
-                                                            : `http://localhost:3005/uploads/${comment.photo}`} />
+                          <img
+                            alt=""
+                            src={
+                              comment.photo && comment.photo.includes('http')
+                                ? `${comment.photo}`
+                                : `http://localhost:3005/uploads/${comment.photo}`
+                            }
+                          />
                           <div className="Course-Comment-User-Name-Sun">
-                            <h6>{comment.account === null
-                                                        ? comment.email.substring(0, 3) + '***'
-                                                        : comment.account.substring(0, 3) + '***'}</h6>
+                            <h6>
+                              {comment.account === null
+                                ? comment.email.substring(0, 3) + '***'
+                                : comment.account.substring(0, 3) + '***'}
+                            </h6>
                             <p>{comment.created_at}</p>
                           </div>
                         </div>
-                        <div className="ms-auto  " style={{ fontSize: '1.5rem', color: 'red' }}>
+                        <div
+                          className="ms-auto  "
+                          style={{ fontSize: '1.5rem', color: 'red' }}
+                        >
                           {[...Array(comment.star)].map((_, index) => (
                             <IoMdStar key={index} />
                           ))}
@@ -517,12 +556,17 @@ export default function CourseDetail() {
                   ))}
                 </div>
                 <div className="modal-footer">
-                  <button type="button" className="btn btn-secondary" data-bs-dismiss="modal">關閉</button>
+                  <button
+                    type="button"
+                    className="btn btn-secondary"
+                    data-bs-dismiss="modal"
+                  >
+                    關閉
+                  </button>
                 </div>
               </div>
             </div>
           </div>
-
 
           {/* 更多推荐课程 */}
           <div className="course-recommended-Sun">
@@ -560,6 +604,5 @@ export default function CourseDetail() {
         </div>
       </div>
     </div>
-
   )
 }

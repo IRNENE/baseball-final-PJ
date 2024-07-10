@@ -5,6 +5,7 @@ import { initUserData, useAuth } from '@/hooks/use-auth'
 import { useCartContext } from '@/context/CartContext'
 import { useTotalAmount } from '@/context/CartPrice'
 import Image from 'next/image'
+import cartUser from '@/hooks/cart-user'
 
 export default function CartProduct() {
   const { auth } = useAuth()
@@ -18,7 +19,7 @@ export default function CartProduct() {
   //個別商品全選狀態
   const { selectAllProducts, setSelectAllProducts } = useCartContext()
   const { productTotal, setProductTotal } = useTotalAmount()
-
+  const { fetchCart } = cartUser()
   const fetchData = async () => {
     console.log(`Fetching data for userId: ${userId}`)
     try {
@@ -199,9 +200,10 @@ export default function CartProduct() {
         console.log('Delete response:', data.message)
         // 重新獲取更新後的購物車數據
         await fetchData()
-        setTimeout(() => {
-          window.location.reload()
-        }, 500) // 添加一个小的延迟，通常500毫秒足够了
+        fetchCart()
+        // setTimeout(() => {
+        //   window.location.reload()
+        // }, 500) // 添加一个小的延迟，通常500毫秒足够了
       } else {
         throw new Error(data.message || 'Failed to delete the cart item.')
       }
