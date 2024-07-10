@@ -11,6 +11,7 @@ import Link from 'next/link'
 import NavM from './navM'
 import Swal from 'sweetalert2'
 import { initUserData, useAuth } from '@/hooks/use-auth'
+import cartUser from '@/hooks/cart-user'
 
 export default function Nav() {
   // 手機板nav用
@@ -162,25 +163,25 @@ export default function Nav() {
   }, [prevScrollPos])
 
   const shouldHideNav = scrollDirection === 'down' && prevScrollPos > 150
-  useEffect(() => {
-    const userId = userData.id
-    if (userId) {
-      fetch(`http://localhost:3005/api/shopping-cart/${userId}`)
-        .then((response) => {
-          if (!response.ok) {
-            throw new Error('Failed to fetch course detail')
-          }
-          return response.json()
-        })
-        .then((data) => {
-          setShoppingCartLength(data.length)
-        })
-        .catch(() => {
-          console.log(`error`)
-        })
-    }
-  }, [auth])
-
+  // useEffect(() => {
+  //   const userId = userData.id
+  //   if (userId) {
+  //     fetch(`http://localhost:3005/api/shopping-cart/${userId}`)
+  //       .then((response) => {
+  //         if (!response.ok) {
+  //           throw new Error('Failed to fetch course detail')
+  //         }
+  //         return response.json()
+  //       })
+  //       .then((data) => {
+  //         setShoppingCartLength(data.length)
+  //       })
+  //       .catch(() => {
+  //         console.log(`error`)
+  //       })
+  //   }
+  // }, [auth])
+  const { cart, addItem } = cartUser()
   const [searchType, setSearchType] = useState('所有')
   const [searchContent, setSearchContent] = useState('')
   const [searchError, setSearchError] = useState('')
@@ -497,7 +498,8 @@ export default function Nav() {
                     <div
                       className={`position-absolute bg-primary d-flex justify-content-center align-items-center ${styles['cart-num']}`}
                     >
-                      <div>{shoppingCartLength}</div>
+                      {/* <div>{shoppingCartLength}</div> */}
+                      <div>{cart.totalAmount}</div>
                     </div>
                   </div>
                 </li>

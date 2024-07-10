@@ -15,8 +15,10 @@ import Swal from 'sweetalert2'
 import favorite from '@/public/images/course/Rectangle false.svg'
 import favoriteLove from '@/public/images/course/Rectangle true.svg'
 import Image from 'next/image'
+import cartUser from '@/hooks/cart-user'
 
 export default function Rent() {
+  const { fetchCart } = cartUser()
   // 物件狀態的初始值，通常需要把每個屬性的初始值寫出
   // !!注意!! 初次render(渲染)會使用初始值
   // !!注意!! 在應用程式執行過程中，務必要保持狀態維持同樣的資料類型
@@ -398,9 +400,10 @@ export default function Rent() {
         title: '成功',
         text: '商品已成功加入到購物車！',
       })
-      setTimeout(() => {
-        window.location.reload()
-      }, 1000)
+      // setTimeout(() => {
+      //   window.location.reload()
+      // }, 1000)
+      fetchCart()
     } catch (error) {
       console.error('加入購物車時出錯:', error)
       // 使用 SweetAlert2 顯示錯誤提示訊息
