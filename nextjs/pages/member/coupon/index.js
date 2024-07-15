@@ -97,7 +97,7 @@ export default function CouponLayout() {
       if (data.success) {
         Swal.fire({
           title: '恭喜!',
-          text: '成功新增優惠卷!',
+          text: `成功新增${data.couponName}優惠卷!`,
           icon: 'success',
         })
         await fetchData()

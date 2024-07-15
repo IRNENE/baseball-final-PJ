@@ -30,7 +30,7 @@ async function checkCoupon(couponCode, userId) {
     // 检查coupon表中是否存在此couponCode
 
     let sqlCouponExists = `
-      SELECT id, time_end FROM coupon WHERE coding = ?;
+      SELECT id, name,time_end FROM coupon WHERE coding = ?;
     `
     const couponResults = await db.query(sqlCouponExists, [couponCode])
     const couponArray = couponResults[0]
@@ -43,7 +43,7 @@ async function checkCoupon(couponCode, userId) {
     const coupon = couponArray[0]
     console.log('coupon', coupon)
     // 检查user_coupon表中用户是否已拥有此优惠券
-    let sqlUserCouponExists = `SELECT user_coupon.*, coupon.time_end
+    let sqlUserCouponExists = `SELECT user_coupon.*, coupon.name, coupon.time_end
     FROM user_coupon
     JOIN coupon ON user_coupon.coupon_id = coupon.id
     WHERE user_coupon.user_id = ? AND user_coupon.coupon_id = ?`
@@ -76,7 +76,11 @@ async function checkCoupon(couponCode, userId) {
         VALUES (?, ?, NOW(),0, NOW(), NOW());
       `
       await db.query(insertSql, [userId, coupon.id])
-      return { success: true, message: '恭喜！新增此優惠券成功' }
+      return {
+        success: true,
+        message: '恭喜！新增此優惠券成功',
+        couponName: coupon.name,
+      }
     }
   } catch (error) {
     console.error('Database error:', error)
