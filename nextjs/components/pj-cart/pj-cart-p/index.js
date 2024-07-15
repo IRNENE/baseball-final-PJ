@@ -5,7 +5,7 @@ import { initUserData, useAuth } from '@/hooks/use-auth'
 import { useCartContext } from '@/context/CartContext'
 import { useTotalAmount } from '@/context/CartPrice'
 import Image from 'next/image'
-import cartUser from '@/hooks/cart-user'
+import { cartUser } from '@/hooks/cart-user'
 
 export default function CartProduct() {
   const { auth } = useAuth()
@@ -180,6 +180,7 @@ export default function CartProduct() {
         ...prevQuantities,
         [productId]: newQuantity,
       }))
+      fetchCart()
       // console.log('測試數量', quantities)
     } catch (error) {
       console.error('Failed to update color:', error)

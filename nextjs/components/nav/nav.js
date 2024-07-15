@@ -11,7 +11,7 @@ import Link from 'next/link'
 import NavM from './navM'
 import Swal from 'sweetalert2'
 import { initUserData, useAuth } from '@/hooks/use-auth'
-import cartUser from '@/hooks/cart-user'
+import { cartUser } from '@/hooks/cart-user'
 
 export default function Nav() {
   // 手機板nav用
@@ -181,7 +181,7 @@ export default function Nav() {
   //       })
   //   }
   // }, [auth])
-  const { cart, addItem } = cartUser()
+  const { cart } = cartUser()
   const [searchType, setSearchType] = useState('所有')
   const [searchContent, setSearchContent] = useState('')
   const [searchError, setSearchError] = useState('')

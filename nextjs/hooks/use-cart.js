@@ -5,12 +5,12 @@ export function CartProvider({ children }) {
   const [productTotal, setProductTotal] = useState(0)
   const [courseTotal, setCourseTotal] = useState(0)
   const [rentTotal, setRentTotal] = useState(0)
-  console.log(
-    'CartProvider: productTotal, courseTotal, rentTotal',
-    productTotal,
-    courseTotal,
-    rentTotal
-  )
+  // console.log(
+  //   'CartProvider: productTotal, courseTotal, rentTotal',
+  //   productTotal,
+  //   courseTotal,
+  //   rentTotal
+  // )
   const setTotal = (type, amount) => {
     console.log(`Setting total for ${type}: ${amount}`) // 打印即将设置的类型和金额
     switch (type) {

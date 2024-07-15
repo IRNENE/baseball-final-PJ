@@ -9,7 +9,7 @@ import Image from 'next/image'
 import axios from 'axios'
 import { IoMdStar, IoMdStarOutline } from 'react-icons/io' //實心星星 空心星星 wun
 import { MdArrowRight } from 'react-icons/md' // wun
-import cartUser from '@/hooks/cart-user'
+import { cartUser } from '@/hooks/cart-user'
 
 export default function CourseDetail() {
   const router = useRouter()
@@ -179,6 +179,7 @@ export default function CourseDetail() {
             showConfirmButton: false,
             timer: 2000,
           })
+          fetchCart()
         } else if (data.status === 'update') {
           Swal.fire({
             icon: 'success',
@@ -186,6 +187,7 @@ export default function CourseDetail() {
             showConfirmButton: false,
             timer: 2000,
           })
+          fetchCart()
         } else {
           Swal.fire({
             icon: 'error',
@@ -196,7 +198,6 @@ export default function CourseDetail() {
         // setTimeout(() => {
         //   window.location.reload()
         // }, 1000)
-        fetchCart()
       })
       .catch((err) => {
         Swal.fire({

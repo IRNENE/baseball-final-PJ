@@ -23,7 +23,7 @@ import Zoom from 'react-medium-image-zoom'
 import 'react-medium-image-zoom/dist/styles.css'
 import Lightbox from 'react-image-lightbox'
 import 'react-image-lightbox/style.css'
-import cartUser from '@/hooks/cart-user'
+import { cartUser } from '@/hooks/cart-user'
 
 export default function ProductDetail() {
   const router = useRouter()
@@ -390,6 +390,7 @@ export default function ProductDetail() {
               showConfirmButton: false,
               timer: 2000,
             })
+            fetchCart()
           } else if (data.status === 'update') {
             Swal.fire({
               icon: 'success',
@@ -397,6 +398,7 @@ export default function ProductDetail() {
               showConfirmButton: false,
               timer: 2000,
             })
+            fetchCart()
           } else {
             Swal.fire({
               icon: 'error',
@@ -407,7 +409,6 @@ export default function ProductDetail() {
           //   setTimeout(() => {
           //     window.location.reload()
           //   }, 1000)
-          fetchCart()
         })
         .catch((err) => {
           console.error('Error adding to cart:', err)

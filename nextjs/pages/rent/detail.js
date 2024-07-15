@@ -392,8 +392,7 @@ export default function Rent() {
 
       const data = await response.json()
       // 在这里处理后端返回的响应，比如更新购物车状态或显示提示信息
-      console.log('商品已加入購物車:', data)
-
+      // console.log('商品已加入購物車:', data)
       // 使用 SweetAlert2 顯示成功提示訊息
       Swal.fire({
         icon: 'success',

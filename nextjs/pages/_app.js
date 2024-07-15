@@ -2,6 +2,7 @@ import { LoaderProvider } from '@/hooks/use-loader'
 import { BbLoader } from '@/hooks/use-loader/component'
 import Layout from '@/components/layout/layout'
 import { AuthProvider } from '@/hooks/use-auth'
+import { CartStateProvider } from '@/hooks/cart-user'
 import { useEffect } from 'react'
 import '../styles/global.css'
 import '@/scss/all.css'
@@ -22,9 +23,11 @@ function MyApp({ Component, pageProps }) {
   return (
     <>
       <AuthProvider>
-        <LoaderProvider CustomLoader={BbLoader}>
-          {getLayout(<Component {...pageProps} />)}
-        </LoaderProvider>
+        <CartStateProvider>
+          <LoaderProvider CustomLoader={BbLoader}>
+            {getLayout(<Component {...pageProps} />)}
+          </LoaderProvider>
+        </CartStateProvider>
       </AuthProvider>
     </>
   )

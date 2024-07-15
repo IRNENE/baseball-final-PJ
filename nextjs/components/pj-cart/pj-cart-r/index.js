@@ -6,7 +6,7 @@ import { initUserData, useAuth } from '@/hooks/use-auth'
 import { useCartContext } from '@/context/CartContext'
 import { useTotalAmount } from '@/context/CartPrice'
 import Image from 'next/image'
-import cartUser from '@/hooks/cart-user'
+import { cartUser } from '@/hooks/cart-user'
 
 export default function CartRentProduct() {
   const { auth } = useAuth()
@@ -182,6 +182,7 @@ export default function CartRentProduct() {
         ...prevQuantities,
         [productId]: newQuantity,
       }))
+      fetchCart()
     } catch (error) {
       console.error('Failed to update rent:', error)
     }
