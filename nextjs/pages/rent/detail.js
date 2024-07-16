@@ -15,7 +15,7 @@ import Swal from 'sweetalert2'
 import favorite from '@/public/images/course/Rectangle false.svg'
 import favoriteLove from '@/public/images/course/Rectangle true.svg'
 import Image from 'next/image'
-import cartUser from '@/hooks/cart-user'
+import { cartUser } from '@/hooks/cart-user'
 
 export default function Rent() {
   const { fetchCart } = cartUser()
