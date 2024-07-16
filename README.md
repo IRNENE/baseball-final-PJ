@@ -1,1 +1,1 @@
-[觀看視頻](https://irnene.github.io/bs-test/video.html)
+[觀看視頻](https://irnene.github.io/video.html)
